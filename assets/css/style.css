@@ -100,7 +100,7 @@ h6 {
 * Desktop Navigation 
 */
 .navbar {
-  padding: 0;
+  padding: 0 20px; /* Add padding to the left and right */
 }
 
 .navbar ul {
@@ -120,7 +120,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 10px 30px;
+  padding: 10px 20px; /* Add padding to the left and right */
   font-size: 14px;
   color: #2c4964;
   white-space: nowrap;
@@ -313,6 +313,7 @@ h6 {
 .navbar-mobile .dropdown>.dropdown-active {
   display: block;
 }
+
 
 /*--------------------------------------------------------------
 # Hero Section
