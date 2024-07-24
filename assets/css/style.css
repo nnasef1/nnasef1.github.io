@@ -1152,12 +1152,39 @@ section {
   box-shadow: 0px 0 20px 0 rgba(0, 0, 0, 0.12);
 }
 
-#footer .copyright {
+#footer .footer-nav {
   text-align: center;
+  margin-bottom: 10px;
+}
+
+#footer .footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+}
+
+#footer .footer-nav ul li {
+  margin: 0 10px;
+}
+
+#footer .footer-nav ul li a {
+  color: #2c4964;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#footer .footer-nav ul li a:hover {
+  color: #d43076;
 }
 
 #footer .credits {
   padding-top: 8px;
   text-align: center;
   font-size: 13px;
+}
+
+#footer .copyright {
+  text-align: center;
+  margin-top: 8px;
 }
