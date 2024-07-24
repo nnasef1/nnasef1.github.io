@@ -318,10 +318,10 @@ h6 {
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
-  width: 100%;
-  height: 75vh;
-  background: url("../img/hero-bg.jpg") top center;
-  background-size: cover;
+  width: 100%; /* Ensure it takes full width */
+  height: 75vh; /* Adjust height as necessary */
+  background: url("../img/head-bg.jpg") center 20% no-repeat; /* Set the background position to center 20% */
+  background-size: cover; /* Make sure the image covers the entire area */
   padding: 0 15px;
 }
 
