@@ -326,6 +326,14 @@ h6 {
   padding: 0 15px;
 }
 
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  #hero {
+    height: 50vh; /* Adjust height for mobile */
+    background-position: center 10%; /* Adjust background position for mobile */
+  }
+}
+
 #hero h1 {
   margin: 0 0 10px 0;
   font-size: 48px;
