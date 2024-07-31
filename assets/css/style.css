@@ -592,13 +592,13 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Portfolio Section
+# Projects Section
 --------------------------------------------------------------*/
-.portfolio {
+.projects {
   padding: 60px 0;
 }
 
-.portfolio .portfolio-wrap {
+.projects .projects-wrap {
   background: #fff;
   padding: 20px;
   margin-bottom: 30px;
@@ -606,20 +606,21 @@ section {
   transition: 0.3s;
   border-radius: 10px;
   text-align: center;
+  border: 2px solid #d43076; /* Pink outline for the project boxes */
 }
 
-.portfolio .portfolio-wrap h4 {
+.projects .projects-wrap h4 {
   font-size: 20px;
   font-weight: 700;
   margin-bottom: 10px;
 }
 
-.portfolio .portfolio-wrap p {
+.projects .projects-wrap p {
   font-size: 15px;
   margin-bottom: 20px;
 }
 
-.portfolio .portfolio-wrap .btn {
+.projects .projects-wrap .btn {
   color: #fff;
   background-color: #d43076;
   border-radius: 5px;
@@ -628,7 +629,7 @@ section {
   transition: background-color 0.3s ease;
 }
 
-.portfolio .portfolio-wrap .btn:hover {
+.projects .projects-wrap .btn:hover {
   background-color: #b02f60;
 }
 
