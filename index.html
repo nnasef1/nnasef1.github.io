@@ -35,7 +35,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column align-items-center justify-content-center">
     <h1>Kareem Elaasar</h1>
-    <h2>Software engineer</h2>
+    <h2>Software Engineer</h2>
     <a href="#about" class="btn-get-started scrollto"><i class="bi bi-chevron-double-down"></i></a>
   </section><!-- End Hero -->
 
@@ -56,6 +56,7 @@
         <li><a class="nav-link scrollto" href="#about">About</a></li>
         <li><a class="nav-link scrollto" href="#skills">Skills</a></li>
         <li><a class="nav-link scrollto" href="#resume">Resume</a></li>
+        <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
         <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
@@ -148,8 +149,6 @@
       </div>
     </section><!-- End Skills Section -->
 
-
-
     <!-- ======= Resume Section ======= -->
     <section id="resume" class="resume section-bg">
       <div class="container">
@@ -191,6 +190,7 @@
                 <li>Developed a web app called UML Lab that allows generating and visualizing UML diagrams from a prompt</li>
                 <li>The app allows the user to edit the generated diagram and ask questions about them using further prompts</li>
                 <li>App was developed using Node.js, React.js, Firebase, OpenAI Assistant API, and PlantUML API</li>
+                <li>Deployed the web app on an AWS EC2 instance</li>
               </ul>
             </div>
             <div class="resume-item">
@@ -201,6 +201,10 @@
                 <li>Developed a Python app to convert hand-written notes to digitized notes</li>
                 <li>Used PaddleOCR to understand and analyze the digital images</li>
                 <li>Used OpenAI API to prompt an LLM to fix spelling, punctuation, and format of the text</li>
+                <br>
+                <li>Developed a web app for creating blog posts called CloudScape</li>
+                <li>Used React to develop the front-end, Python with Flask and MySQL for the backend</li>
+                <li>Deployed app on Microsoft Azure and backend on AWS</li>
               </ul>
             </div>
           </div>
@@ -236,61 +240,114 @@
       </div>
     </section><!-- End Resume Section -->
 
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
 
-    <!-- ======= Contact Section ======= -->
-<section id="contact" class="contact section-bg">
-  <div class="container">
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>Here are some of the projects I have worked on. Click on any project to view more details.</p>
+        </div>
 
-    <div class="section-title">
-      <h2>Contact</h2>
-      <p>If you'd like to get in touch, please reach out through any of the following channels or send me a message using the form below.</p>
-    </div>
-
-    <div class="row">
-
-      <div class="col-lg-4 col-md-4">
-        <div class="contact-about">
-          <p>I am always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-          <div class="info">
-            <div class="d-flex align-items-center">
-              <i class="bi bi-geo-alt"></i>
-              <p>Irvine, California</p>
-            </div>
-            <div class="d-flex align-items-center mt-4">
-              <i class="bi bi-envelope"></i>
-              <p>kareemelaasar02@gmail.com</p>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+              <h4>Document To Knowledge Graph Visualizer</h4>
+              <p>An API that converts a document to a knowledge graph visualizable in GraphDB.</p>
+              <a href="project-templates/Document-To-Knowledge-Graph-Visualizer.html" class="btn btn-primary">View Details</a>
             </div>
           </div>
-          <div class="social-links mt-4">
-            <a href="https://www.linkedin.com/in/kareemelaasar/" class="linkedin"><i class="bi bi-linkedin"></i></a>
-            <a href="https://github.com/kelaasar" class="github"><i class="bi bi-github"></i></a>
+
+          <div class="col-lg-3 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+              <h4>UML Lab</h4>
+              <p>A web app that allows users to generate and visualize UML diagrams from a single prompt.</p>
+              <a href="project-templates/UML-Lab.html" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+              <h4>Req GPT</h4>
+              <p>An API that allows for the refinement automation of software requirements via communication with GPT-4.</p>
+              <a href="project-templates/Req-GPT.html" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+              <h4>Note Digitizer</h4>
+              <p>An API that takes an image with text and converts it to digitzed notes.</p>
+              <a href="project-templates/Note-Digitizer.html" class="btn btn-primary">View Details</a>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+              <h4>Cloudscape</h4>
+              <p>A web app for users to create custom blogs and profiles.</p>
+              <a href="project-templates/CloudScape.html" class="btn btn-primary">View Details</a>
+            </div>
           </div>
         </div>
+
       </div>
+    </section><!-- End Portfolio Section -->
 
-      <div class="col-lg-8 col-md-8">
-        <form action="https://formspree.io/f/xanwqvnq" method="post">
-          <div class="form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>If you'd like to get in touch, please reach out through any of the following channels or send me a message using the form below.</p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-4">
+            <div class="contact-about">
+              <p>I am always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+              <div class="info">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-geo-alt"></i>
+                  <p>Irvine, California</p>
+                </div>
+                <div class="d-flex align-items-center mt-4">
+                  <i class="bi bi-envelope"></i>
+                  <p>kareemelaasar02@gmail.com</p>
+                </div>
+              </div>
+              <div class="social-links mt-4">
+                <a href="https://www.linkedin.com/in/kareemelaasar/" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/kelaasar" class="github"><i class="bi bi-github"></i></a>
+              </div>
+            </div>
           </div>
-          <div class="form-group mt-3">
-            <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+
+          <div class="col-lg-8 col-md-8">
+            <form action="https://formspree.io/f/xanwqvnq" method="post">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group mt-3">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
           </div>
-          <div class="form-group mt-3">
-            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-          </div>
-          <div class="form-group mt-3">
-            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
-          </div>
-          
-          <div class="text-center"><button type="submit">Send Message</button></div>
-        </form>
+
+        </div>
+
       </div>
-
-    </div>
-
-  </div>
-</section><!-- End Contact Section -->
+    </section><!-- End Contact Section -->
 
 
 
@@ -299,22 +356,22 @@
 
   </main><!-- End #main -->
 
-<!-- ======= Footer ======= -->
-<footer id="footer">
-  <div class="container">
-    <div class="footer-nav">
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#resume">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-nav">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="credits">
+        Developed by <strong>Kareem Elaasar</strong>
+      </div>
     </div>
-    <div class="credits">
-      Developed by <strong>Kareem Elaasar</strong>
-    </div>
-  </div>
-</footer><!-- End Footer -->
+  </footer><!-- End Footer -->
 
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
