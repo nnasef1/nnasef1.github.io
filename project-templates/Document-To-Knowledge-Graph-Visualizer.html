@@ -58,15 +58,72 @@
     <section id="project-details" class="project-details">
       <div class="container">
         <div class="project-title">
-          <h2>Document To Knowledge Graph Visualizer</h2>
+          <h1>Document To Knowledge Graph Visualizer</h1>
         </div>
         <div class="project-content">
+          <h2>Overview</h2>
           <p>
-            
+            This project leverages the power of AI to transform unstructured documents, specifically PDFs, into structured knowledge graphs. By converting and processing documents, the project extracts valuable data, which is then organized into RDF triples and ontologies. These are ultimately visualized in a knowledge graph, making the information more accessible and easier to query.
           </p>
+
+          <h3>Key Features</h3>
+          <ul>
+            <li><strong>AI-Driven Text Chunking:</strong> After converting PDFs to HTML, the content is intelligently split into manageable, logically coherent chunks. This is achieved using <strong>Langchain's RecursiveCharacterTextSplitter</strong> for initial splitting and <strong>OpenAI's API</strong> to further refine the chunks based on context, ensuring that each chunk maintains topic continuity and logical separation.</li>
+            <li><strong>AI-Powered Ontology Generation:</strong> The AI generates RDF triples and T-box ontologies from the text chunks. <strong>OpenAI's models</strong> transform raw textual data into structured ontological components, ensuring logical and contextually accurate triples and classes. The AI further helps to generalize the T-box ontology, merging multiple chunks into a cohesive structure.</li>
+            <li><strong>Automated A-box Creation:</strong> Using the AI-generated T-box as a foundation, the project automatically constructs an A-box ontology, organizing individual instances and relationships according to the structured schema defined by the T-box.</li>
+            <li><strong>Knowledge Graph Visualization:</strong> The resulting A-box ontology is uploaded and visualized in <strong>GraphDB</strong>, allowing users to explore and query the structured data efficiently.</li>
+          </ul>
+
+          <h3>Technologies Used</h3>
+          <ul>
+            <li><strong>Python:</strong> For all data processing, including PDF conversion, text chunking, and ontology generation.</li>
+            <li><strong>OpenAI API:</strong> For AI-driven text chunking and ontology generation, ensuring that the knowledge graph is both comprehensive and logically structured.</li>
+            <li><strong>GraphDB:</strong> For visualizing and querying the resulting knowledge graph.</li>
+          </ul>
+
+          <h3>AI Integration</h3>
+          <p>
+            The project makes extensive use of AI, particularly for:
+          </p>
+          <ul>
+            <li><strong>Text Chunking:</strong> AI is used to intelligently split large text blocks into coherent chunks that maintain logical flow and thematic consistency.</li>
+            <li><strong>Ontology Generation:</strong> AI transforms text into RDF triples and ontologies, ensuring that the data is structured in a way that makes sense both contextually and logically.</li>
+          </ul>
         </div>
       </div>
     </section><!-- End Project Details Section -->
+
+    <!-- ======= Demo Section ======= -->
+    <section id="demo" class="demo">
+      <div class="container">
+        <div class="section-title">
+          <h2>Demo</h2>
+        </div>
+        <div class="row mb-4">
+          <div class="col-12">
+            <h3>Example Text:</h3>
+            <p>
+              Thomas Jeffrey Hanks (born July 9, 1956) is an American actor and filmmaker. Known for both his comedic and dramatic roles, he is one of the most popular and recognizable film stars worldwide, and is regarded as an American cultural icon. Hanks's films have grossed more than $4.9 billion in North America and more than $9.96 billion worldwide, making him the fourth-highest-grossing actor in North America.
+              <br><br>
+              Hanks made his breakthrough with leading roles in a series of comedies: <em>Splash</em> (1984), <em>The Money Pit</em> (1986), <em>Big</em> (1988) and <em>A League of Their Own</em> (1992). He won two consecutive Academy Awards for Best Actor, playing a gay lawyer suffering from AIDS in <em>Philadelphia</em> (1993) and the title character in <em>Forrest Gump</em> (1994). Hanks collaborated with Steven Spielberg on five films: <em>Saving Private Ryan</em> (1998), <em>Catch Me If You Can</em> (2002), <em>The Terminal</em> (2004), <em>Bridge of Spies</em> (2015) and <em>The Post</em> (2017), as well as the World War II miniseries <em>Band of Brothers</em> (2001), <em>The Pacific</em> (2010) and <em>Masters of the Air</em> (2024). He has also frequently collaborated with directors Ron Howard, Nora Ephron, and Robert Zemeckis.
+            </p>
+          </div>
+        </div>
+
+        <h3>GraphDB:</h3>
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <img src="../assets/img/class hierarchy.JPG" alt="Class Hierarchy" class="img-fluid rounded">
+            <p class="text-center mt-2"><strong>Class Hierarchy</strong></p>
+          </div>
+          <div class="col-lg-6 mb-4">
+            <img src="../assets/img/class relationships.JPG" alt="Class Relationships" class="img-fluid rounded">
+            <p class="text-center mt-2"><strong>Class Relationships</strong></p>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Demo Section -->
+
 
   </main><!-- End #main -->
 
