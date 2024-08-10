@@ -58,15 +58,68 @@
     <section id="project-details" class="project-details">
       <div class="container">
         <div class="project-title">
-          <h2>UML Lab</h2>
+          <h1>UML Lab</h1>
         </div>
         <div class="project-content">
+          <h2>Overview</h2>
           <p>
-            
+            UML Lab is an innovative tool that enables users to create, modify, and refine UML diagrams through a combination of AI-powered interactions and manual editing. By leveraging OpenAI's capabilities, the application allows users to generate PlantUML code from natural language queries, as well as ask questions or request modifications. The system does not provide immediate feedback; instead, users can iteratively refine their diagrams by either interacting with the AI or manually editing the code.
+          </p>
+
+          <h3>Key Features</h3>
+          <ul>
+            <li><strong>AI-Driven UML Generation:</strong> Users can input queries to generate UML diagrams, which are processed by an OpenAI-powered LLM. The AI translates the queries into PlantUML code, enabling users to create diagrams with minimal manual coding.</li>
+            <li><strong>Interactive Refinement:</strong> Users can interact with the LLM to request changes or ask questions about the existing PlantUML code. This feature supports an iterative design process, where users can refine their diagrams based on the AI's responses or through manual adjustments to the code.</li>
+            <li><strong>Manual Code Editing:</strong> In addition to AI-driven modifications, users have full control over the PlantUML code, allowing for manual tweaks and adjustments. This ensures that users can fine-tune their diagrams to meet specific requirements or preferences.</li>
+            <li><strong>Visualization of UML Diagrams:</strong> Once the PlantUML code is finalized, it is converted into a visual diagram using the PlantUML API. The application provides a clear representation of the diagram based on the code, although feedback is not immediate, emphasizing an iterative approach to design.</li>
+          </ul>
+
+          <h3>Technologies Used</h3>
+          <ul>
+            <li><strong>React:</strong> Front-end framework for building the user interface.</li>
+            <li><strong>OpenAI API:</strong> Powers the LLM for generating and refining PlantUML code based on user input.</li>
+            <li><strong>PlantUML API:</strong> Converts PlantUML code into visual diagrams.</li>
+            <li><strong>MUI (Material-UI):</strong> Provides a set of UI components for React, used for building the application's user interface.</li>
+          </ul>
+
+          <h3>AI Integration</h3>
+          <p>
+            The integration with OpenAI enables a conversational interface that simplifies the process of diagram creation and refinement. Users can engage with the AI to generate UML diagrams or ask it to make specific changes, all while retaining the ability to manually edit the underlying PlantUML code. This combination of AI-driven and manual processes allows for a flexible and powerful design experience.
           </p>
         </div>
       </div>
     </section><!-- End Project Details Section -->
+
+    <!-- ======= Demo Section ======= -->
+    <section id="demo" class="demo">
+      <div class="container">
+        <div class="section-title">
+          <h2>Demo</h2>
+        </div>
+        <div class="row mb-4">
+          <div class="col-12">
+            <p>
+              In this example, I am prompting UML Lab to create a class diagram for a car dealership.
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <img src="../assets/img/uml lab index.JPG" alt="Example Diagram 1" class="img-fluid rounded">
+            <p class="text-center mt-2"></p>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Demo Section -->
+
+  <!-- ======= GitHub Repo Section ======= -->
+  <section id="github-repo" class="github-repo">
+    <div class="container text-center">
+      <p>Explore the source code on GitHub:</p>
+      <a href="https://github.com/kelaasar/UML-Lab" target="_blank" class="btn"><i class="bi bi-github"></i> GitHub Repository</a>
+    </div>
+  </section><!-- End GitHub Repo Section -->
 
   </main><!-- End #main -->
 
@@ -77,9 +130,10 @@
         <ul>
           <li><a href="../index.html#hero">Home</a></li>
           <li><a href="../index.html#about">About</a></li>
-          <li><a href="../index.html#resume">Resume</a></li>
-          <li><a href="../index.html#projects">Projects</a></li>
-          <li><a href="../index.html#contact">Contact</a></li>
+          <li><a class="nav-link scrollto" href="../index.html#skills">Skills</a></li>
+          <li><a class="nav-link scrollto" href="../index.html#resume">Resume</a></li>
+          <li><a class="nav-link scrollto" href="../index.html#projects">Projects</a></li>
+          <li><a class="nav-link scrollto" href="../index.html#contact">Contact</a></li>
         </ul>
       </div>
       <div class="credits">
