@@ -663,6 +663,31 @@ section {
 }
 
 /*--------------------------------------------------------------
+# GitHub Repo Section
+--------------------------------------------------------------*/
+.github-repo {
+  padding: 20px 0;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.github-repo p {
+  margin: 0;
+  font-size: 14px;
+  color: #5a656e;
+}
+
+.github-repo a {
+  color: #d43076;
+  text-decoration: underline;
+}
+
+.github-repo a:hover {
+  color: #b02f60;
+}
+
+
+/*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
 .contact .contact-about h3 {
