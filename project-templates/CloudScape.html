@@ -33,12 +33,11 @@
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex align-items-center justify-content-between">
       <div class="logo">
-        <h1><a href="../index.html"></a></h1>
-        <a href="../index.html"><img src="../assets/img/supernovaLogoBlack.png" alt="" class="img-fluid"></a>
+        <a href="../index.html"><img src="../assets/img/full-logo.jpg" alt="Kareem Elaasar" class="img-fluid"></a>
       </div>
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto" href="../index.html#hero">Home</a></li>
+          <li><a class="nav-link scrollto active" href="../index.html#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="../index.html#about">About</a></li>
           <li><a class="nav-link scrollto" href="../index.html#skills">Skills</a></li>
           <li><a class="nav-link scrollto" href="../index.html#resume">Resume</a></li>
@@ -48,7 +47,9 @@
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
     </div>
-  </header><!-- End Header -->
+  </header>
+  <!-- End Header -->
+  
 
   <!-- ======= Main Content ======= -->
   <main id="main">
@@ -57,15 +58,73 @@
     <section id="project-details" class="project-details">
       <div class="container">
         <div class="project-title">
-          <h2>Cloudscape</h2>
+          <h1>CloudScape</h1>
         </div>
         <div class="project-content">
+          <h2>Overview</h2>
           <p>
-              In this project, I wrote an API using python
+            This project is a full-stack blogging platform designed to provide a seamless user experience for creating, reading, updating, and deleting blog posts. The front-end is built using React and React Router, allowing users to navigate between different pages such as the homepage, profile page, blog posts, and login/signup forms. The backend leverages Azure Functions for serverless API management, handling tasks such as user authentication, blog post management, and data retrieval.
           </p>
+
+          <h3>Key Features</h3>
+          <ul>
+            <li><strong>User Authentication:</strong> Secure login and signup system that allows users to create an account, log in, and manage their profiles.</li>
+            <li><strong>Dynamic Content Management:</strong> Users can create and manage blog posts, which are dynamically fetched and displayed on the homepage.</li>
+            <li><strong>Responsive Design:</strong> The platform is designed to be responsive, ensuring a seamless experience across various devices.</li>
+            <li><strong>Serverless Backend:</strong> The backend is powered by Azure Functions, providing a scalable and cost-effective solution for handling HTTP requests and managing data.</li>
+            <li><strong>Profile Management:</strong> Users can view and update their profiles, including personal information and a list of their blog posts.</li>
+          </ul>
+
+          <h3>Technologies Used</h3>
+          <ul>
+            <li><strong>React:</strong> For building the user interface, with components like `Homepage`, `Login`, `BlogPage`, and `ProfilePage`.</li>
+            <li><strong>React Router:</strong> For handling client-side routing, allowing users to navigate between different views without reloading the page.</li>
+            <li><strong>Azure Functions:</strong> Serverless backend to handle API requests and manage data.</li>
+            <li><strong>CSS:</strong> Custom styles for different components to ensure a consistent look and feel across the platform.</li>
+          </ul>
         </div>
       </div>
     </section><!-- End Project Details Section -->
+
+    <!-- ======= Demo Section ======= -->
+    <section id="demo" class="demo">
+      <div class="container">
+        <div class="section-title">
+          <h2>Demo</h2>
+        </div>
+        <div class="row mb-4">
+          <div class="col-12">
+            <p>
+              Here is a showcase of the blog creation process using CloudScape. It shows our working database; handling login information and account creation, 
+              and how posts are dynamically fetched and rendered on the platform. Each post can include text, images, and other media to create a rich blogging experience.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 mb-4">
+            <img src="../assets/img/cloudscape-login.JPG" alt="Login Page" class="img-fluid rounded">
+          </div>
+          <div class="col-lg-6 mb-4">
+            <img src="../assets/img/cloudscape-profile.JPG" alt="Profile Page" class="img-fluid rounded">
+          </div>
+          <div class="col-lg-6 mb-4">
+            <img src="../assets/img/cloudscape-postcreation.JPG" alt="Post Creation" class="img-fluid rounded">
+          </div>
+          <div class="col-lg-6 mb-4">
+            <img src="../assets/img/cloudscape-post.JPG" alt="Blog Post" class="img-fluid rounded">
+          </div>
+        </div>
+      </div>
+    </section><!-- End Demo Section -->
+
+
+    <!-- ======= GitHub Repo Section ======= -->
+    <section id="github-repo" class="github-repo">
+      <div class="container text-center">
+        <p>Explore the source code on GitHub:</p>
+        <a href="https://github.com/orgs/CS4650Group/repositories" target="_blank" class="btn"><i class="bi bi-github"></i> GitHub Repository</a>
+      </div>
+    </section><!-- End GitHub Repo Section -->
 
   </main><!-- End #main -->
 
