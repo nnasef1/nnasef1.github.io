@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Note Digitizer</title>
+  <title>InkWave</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -57,15 +57,186 @@
     <section id="project-details" class="project-details">
       <div class="container">
         <div class="project-title">
-          <h2>Note Digitizer</h2>
+          <h2>InkWave</h2>
         </div>
         <div class="project-content">
+          <h2>Overview</h2>
           <p>
-            
+            InkWave is an advanced API designed to convert handwritten text from an image into digital text. The process involves three main stages: First, a Computer Vision (CV) model transcribes the handwritten content into digital text. Next, the text undergoes cleaning and formatting through a Natural Language Processing (NLP) model. Finally, the text is passed through a Large Language Model (LLM) to reformat and restore the original structure of the content, ensuring the final output is as close to the intended format as possible.
           </p>
+
+          <h3>Key Features</h3>
+          <ul>
+            <li><strong>Handwriting Recognition:</strong> A robust CV model is used to accurately recognize and transcribe handwritten text from images.</li>
+            <li><strong>Text Cleaning and Formatting:</strong> The transcribed text is cleaned and formatted using an NLP model to remove any inconsistencies or errors.</li>
+            <li><strong>Text Restoration:</strong> An LLM is used to reformat the cleaned text, restoring the original structure and style of the handwritten document.</li>
+            <li><strong>PDF Export:</strong> The final output can be exported as a well-formatted PDF document, making it easy to share and use the transcribed text.</li>
+          </ul>
+
+          <h3>Technologies Used</h3>
+          <ul>
+            <li><strong>PaddleOCR:</strong> A powerful tool for Optical Character Recognition, used to transcribe handwritten text from images.</li>
+            <li><strong>OpenAI API:</strong> Leverages GPT models to reformat and restore the structure of the text after initial transcription and cleaning.</li>
+            <li><strong>Natural Language Toolkit (NLTK):</strong> Provides tools for text processing and cleaning to ensure the final output is free of errors.</li>
+            <li><strong>Flask:</strong> A lightweight web framework used to build and serve the InkWave API, enabling seamless integration into other applications.</li>
+          </ul>
         </div>
       </div>
     </section><!-- End Project Details Section -->
+
+    <!-- ======= Demo Section ======= -->
+    <section id="demo" class="demo">
+      <div class="container">
+        <div class="section-title">
+          <h2>Demo</h2>
+        </div>
+        <div class="row mb-4">
+          <div class="col-12">
+            <p>
+              Below is a demonstration of the InkWave API in action. The demo showcases the process of uploading an image with handwritten text, the API's conversion of the image to digital text through OCR, the cleaned and formatted text using NLP, and the final AI-enhanced output.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Original Handwritten Image -->
+          <div class="col-12 mb-4 text-center">
+            <h5><strong>Image Input</strong></h5>
+            <img src="../assets/img/notes.JPG" alt="Handwritten Input" class="img-fluid rounded">
+            <p class="text-center mt-2"><strong>Original Handwritten Image</strong></p>
+          </div>
+
+          <!-- OCR Result -->
+          <div class="col-12 mb-4">
+            <div class="card">
+              <div class="card-header text-center">
+                <h5><strong>OCR Result</strong></h5>
+              </div>
+              <div class="card-body">
+                <pre class="ocr-output p-3 bg-light">
+                  Basic Notes
+                  Anng
+                  10/9/12
+                  StudyTips
+                  Prepare before class
+                  reicw nots from last class
+                  look through chaer to wnderstard basiideaof
+                  this class
+                  May tke R0-3o mns but makes a buge differee
+                  When in doubt, write it down
+                  Pont wste evoythng though Main Pomts Main ldeas
+                  Dont spend too long decdng F you should Wredown
+                  Thin your notes
+                  Don+wrk evoythngLeawe outwords
+                  use abbreyiations-include a key of speciFi<-for-
+                  this lecture abbreviatrons.g.A lectre about
+                  Kmy Hery Vll wll requirc you t repeat his name
+                  several tmes.nstad of wnty t out each
+                  Hmemake a no+Km HenyVl=HOfthat
+                  woul be confusedw Kmg Hory Vllabbrerat
+                  it asKg HeryVl=8
+                  nnow your prof
+                  usethe nok-taky method that wl besthele
+                  yow wth this particular prof's lectres
+                  A more ocgaoiz prof works well wth the
+                  Cornell style.usethe not-takn methoc
+                  fc vsua leaners for a prof that jumps
+                  arou an returns t pcous ponts
+                  Show the prof ye nots aActhe first
+                  lectre and ask if you are hithng man ponts.
+                </pre>
+              </div>
+            </div>
+          </div>
+          
+          <!-- NLP Processed Result -->
+          <div class="col-12 mb-4">
+            <div class="card">
+              <div class="card-header text-center">
+                <h5><strong>NLP Processed Result</strong></h5>
+              </div>
+              <div class="card-body">
+                <pre class="nlp-output p-3 bg-light">
+                  Basic Notes
+                  Anng
+                  10/9/12
+                  Study Tips
+                  Prepare before class
+                  review notes from last class
+                  look through chapter to understand basic idea of
+                  this class
+                  May take 20-30 mins but makes a huge difference
+                  When in doubt, write it down
+                  Don't waste everything though. Main points, main ideas
+                  Don't spend too long deciding if you should write down
+                  Thin your notes
+                  Don't write everything. Leave out words
+                  use abbreviations - include a key of specific abbreviations for
+                  this lecture. E.g., A lecture about King Henry VIII will require you to repeat his name
+                  several times. Instead of writing it out each time,
+                  make a note: King Henry VIII = KH8.
+                  That way, it won’t be confused with King Henry VII. Abbreviate
+                  it as King Henry VIII = 8.
+                  Know your prof
+                  use the note-taking method that will best help
+                  you with this particular prof's lectures
+                  A more organized prof works well with the
+                  Cornell style. Use the note-taking method
+                  for visual learners for a prof that jumps
+                  around and returns to previous points.
+                  Show the prof your notes after the first
+                  lecture and ask if you are hitting main points.
+
+                </pre>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI-Enhanced Result -->
+          <div class="col-12 mb-4">
+            <div class="card">
+              <div class="card-header text-center">
+                <h5><strong>AI-Enhanced Result</strong></h5>
+              </div>
+              <div class="card-body">
+                <pre class="ai-output p-3 bg-light">
+                  Basic Notes
+                  Anna
+                  10/9/12
+                  Study Tips
+                  - Prepare before class
+                    - Review notes from last class
+                    - Look through chapter to understand basic idea of this class
+                    - May take 20-30 mins but makes a huge difference
+                  - When in doubt, write it down
+                    - Point: write everything through Main Points Main Ideas
+                    - Don't spend too long deciding if you should write down
+                  - Thin your notes
+                    - Don't write everything. Leave out words.
+                    - Use abbreviations - include a key of specific-for-this lecture abbreviations. e.g., A lecture about King Henry VIII will require you to repeat his name several times. Instead of writing it out each time, make a note: King Henry 
+                  VIII = H8. For that would be confused with King Henry VII, abbreviate it as King Henry VIII = 8.
+                  - Know your prof
+                    - Use the note-taking method that will best help you with this particular prof's lectures.
+                    - A more organized prof works well with the Cornell style. Use the note-taking method for visual learners for a prof that jumps around and returns to previous points.
+                  - Show the prof your notes after the first lecture and ask if you are hitting main points.
+                </pre>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section><!-- End Demo Section -->
+
+
+
+
+    <!-- ======= GitHub Repo Section ======= -->
+    <section id="github-repo" class="github-repo">
+      <div class="container text-center">
+        <p>Explore the source code on GitHub:</p>
+        <a href="https://github.com/cppsea/InkWave/blob/main/InkWaveModelChaining.ipynb" target="_blank" class="btn"><i class="bi bi-github"></i> GitHub Repository</a>
+      </div>
+    </section><!-- End GitHub Repo Section -->
 
   </main><!-- End #main -->
 
