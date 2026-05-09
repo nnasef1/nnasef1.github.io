@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nariman Nasef — Program leadership &amp; executive coaching</title>
+  <meta name="description" content="Independent advisor, program leader and executive coach helping engineering leaders deliver mission-critical software at scale." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              ink:    '#003645',
+              ink2:   '#04293a',
+              lime:   '#81d10b',
+              lime2:  '#9ee32a',
+              mint:   '#d8f0d8',
+              mint2:  '#c8ead0',
+              cream:  '#f3eee5',
+              ember:  '#e6552d',
+              sand:   '#efe9df',
+            },
+          },
+          fontFamily: {
+            display: ['Barlow', 'system-ui', 'sans-serif'],
+            sans:    ['Inter', 'system-ui', 'sans-serif'],
+          },
+          letterSpacing: {
+            tightest: '-0.035em',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: #003645;
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-display { font-family: 'Barlow', system-ui, sans-serif; font-weight: 700; }
+
+    .hero-sky {
+      background:
+        radial-gradient(120% 90% at 78% 18%, #f6c98a 0%, #f3a25a 18%, #ec6f3b 38%, #c93a26 62%, #6a1f24 88%, #2a1224 100%);
+    }
+    .hero-haze {
+      background:
+        radial-gradient(60% 40% at 50% 22%, rgba(255,210,160,0.55), rgba(255,210,160,0) 70%),
+        radial-gradient(80% 60% at 70% 50%, rgba(255,140,90,0.35), rgba(255,140,90,0) 70%);
+      mix-blend-mode: screen;
+    }
+    .silhouette {
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 220' preserveAspectRatio='none'><g fill='%23120a14'><rect x='0' y='150' width='1440' height='70'/><rect x='40' y='110' width='30' height='40'/><rect x='80' y='80' width='40' height='70'/><rect x='130' y='95' width='30' height='55'/><rect x='170' y='60' width='50' height='90'/><rect x='230' y='100' width='30' height='50'/><rect x='270' y='75' width='40' height='75'/><rect x='320' y='105' width='30' height='45'/><rect x='360' y='50' width='60' height='100'/><rect x='430' y='85' width='40' height='65'/><rect x='480' y='105' width='30' height='45'/><rect x='520' y='70' width='50' height='80'/><rect x='580' y='95' width='30' height='55'/><rect x='620' y='40' width='70' height='110'/><rect x='700' y='80' width='40' height='70'/><rect x='750' y='100' width='30' height='50'/><rect x='790' y='65' width='50' height='85'/><rect x='850' y='90' width='40' height='60'/><rect x='900' y='55' width='60' height='95'/><rect x='970' y='100' width='30' height='50'/><rect x='1010' y='75' width='50' height='75'/><rect x='1070' y='95' width='30' height='55'/><rect x='1110' y='60' width='60' height='90'/><rect x='1180' y='100' width='40' height='50'/><rect x='1230' y='80' width='40' height='70'/><rect x='1280' y='110' width='30' height='40'/><rect x='1320' y='70' width='50' height='80'/><rect x='1380' y='95' width='40' height='55'/></g></svg>");
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      background-position: bottom;
+    }
+    .grain::after {
+      content: "";
+      position: absolute; inset: 0;
+      pointer-events: none;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+      opacity: .35;
+      mix-blend-mode: overlay;
+    }
+
+    .btn-pill { border-radius: 2.5rem; }
+    .btn-primary {
+      background: #81d10b; color: #003645;
+      transition: transform .25s cubic-bezier(.2,.7,.2,1), background .25s, box-shadow .25s;
+      box-shadow: 0 8px 22px -10px rgba(129,209,11,.6);
+    }
+    .btn-primary:hover { background: #9ee32a; transform: translateY(-1px); }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary:focus-visible { outline: 3px solid #003645; outline-offset: 2px; }
+
+    .btn-secondary {
+      background: #003645; color: #fff; border: 1.5px solid #81d114;
+      transition: transform .25s cubic-bezier(.2,.7,.2,1), background .25s;
+    }
+    .btn-secondary:hover { background: #04293a; transform: translateY(-1px); }
+    .btn-secondary:focus-visible { outline: 3px solid #81d114; outline-offset: 2px; }
+
+    .card { transition: transform .35s cubic-bezier(.2,.7,.2,1); }
+    .card:hover { transform: translateY(-4px); }
+    .card img { transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+    .card:hover img { transform: scale(1.03); }
+
+    .bg-mint-soft {
+      background:
+        radial-gradient(80% 60% at 0% 0%, rgba(129,209,11,0.10), transparent 60%),
+        radial-gradient(60% 50% at 100% 0%, rgba(0,54,69,0.06), transparent 70%),
+        #d8efd8;
+    }
+    .bg-ink-deep {
+      background:
+        radial-gradient(60% 50% at 90% 0%, rgba(129,209,11,0.10), transparent 60%),
+        #003645;
+    }
+
+    .hero-h1 {
+      font-family: 'Barlow', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.02;
+    }
+
+    .img-treat {
+      position: relative; overflow: hidden; border-radius: 14px;
+    }
+
+    .chip {
+      display: inline-flex; align-items: center; gap: .4rem;
+      font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase;
+      color: #003645;
+    }
+    .chip::before {
+      content: ""; width: 6px; height: 6px; border-radius: 999px; background: #81d10b;
+    }
+
+    .nav-link { position: relative; }
+    .nav-link::after {
+      content:""; position:absolute; left:0; bottom:-6px; height:2px; width:0;
+      background:#81d10b; transition: width .3s cubic-bezier(.2,.7,.2,1);
+    }
+    .nav-link:hover::after { width: 100%; }
+
+    .lift {
+      box-shadow:
+        0 1px 1px rgba(0,54,69,.04),
+        0 8px 18px -8px rgba(0,54,69,.18),
+        0 24px 48px -28px rgba(0,54,69,.30);
+    }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- TOP HEADER -->
+  <header class="absolute inset-x-0 top-0 z-30">
+    <div class="max-w-[88rem] mx-auto px-5 lg:px-10 h-[80px] flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2" aria-label="Nariman Nasef">
+        <svg viewBox="0 0 200 28" class="h-5 w-auto" aria-hidden="true">
+          <text x="0" y="22" font-family="Barlow, sans-serif" font-weight="800" font-size="26" letter-spacing="-1.4" fill="#ffffff">nariman nasef</text>
+        </svg>
+      </a>
+      <nav class="hidden lg:flex items-center gap-9 text-[13.5px] font-medium text-white/95">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#engagements">Engagements</a>
+        <a class="nav-link" href="#coaching">Coaching</a>
+        <a class="nav-link" href="#insights">Insights</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+      <div class="flex items-center gap-4 text-white/95">
+        <a href="#contact" class="hidden md:inline-flex btn-pill items-center px-5 h-10 text-[13px] font-semibold ring-1 ring-white/40 hover:bg-white/10 transition">Book an intro</a>
+        <button aria-label="Menu" class="lg:hidden w-9 h-9 rounded-full ring-1 ring-white/30 flex items-center justify-center hover:bg-white/10 transition">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden">
+    <div class="hero-sky relative grain">
+      <div class="hero-haze absolute inset-0"></div>
+      <div class="silhouette absolute inset-x-0 bottom-0 h-[55%]"></div>
+
+      <div class="relative max-w-[88rem] mx-auto px-5 lg:px-10 pt-[170px] pb-[200px] lg:pt-[200px] lg:pb-[230px]">
+        <div class="max-w-[720px]">
+          <div class="text-[12px] tracking-[.16em] font-semibold uppercase text-white/85 mb-5 flex items-center gap-3">
+            <span class="inline-block w-8 h-px bg-white/70"></span>
+            Independent consultancy · Irvine, California
+          </div>
+          <h1 class="hero-h1 text-white text-[46px] sm:text-[60px] lg:text-[74px]">
+            Program leadership for<br/>mission-critical software.<br/>Coaching for the leaders<br/>behind it.
+          </h1>
+          <p class="mt-6 text-white/85 max-w-[560px] text-[15px] leading-[1.65]">
+            I'm Nariman Nasef — a software and cloud delivery leader with twenty-plus years steering complex programs and the people who run them. I help teams ship the work that matters, and the leaders behind it grow into the moment.
+          </p>
+          <div class="mt-8 flex items-center gap-3">
+            <a href="#contact" class="btn-pill btn-primary inline-flex items-center px-6 h-12 text-[14px] font-semibold">Book an intro call</a>
+            <a href="#services" class="btn-pill inline-flex items-center px-6 h-12 ring-1 ring-white/40 text-white hover:bg-white/10 transition text-[14px] font-semibold">How I work</a>
+          </div>
+        </div>
+
+        <div class="absolute right-6 lg:right-12 bottom-12 flex flex-col gap-3 items-center">
+          <span class="w-px h-12 bg-white/30"></span>
+          <span class="w-2 h-2 rounded-full bg-white"></span>
+          <span class="w-2 h-2 rounded-full bg-white/40"></span>
+          <span class="w-2 h-2 rounded-full bg-white/40"></span>
+          <span class="w-2 h-2 rounded-full bg-white/40"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="bg-white">
+    <div class="max-w-[88rem] mx-auto px-5 lg:px-10 py-20 lg:py-28">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div class="lg:col-span-6">
+          <div class="img-treat lift aspect-[4/5] sm:aspect-[5/6] lg:aspect-[4/5]">
+            <img src="https://placehold.co/900x1100/0d3a4a/ffffff?text=+" class="w-full h-full object-cover" alt="" />
+            <div class="absolute inset-0 bg-gradient-to-tr from-brand-ink/70 via-brand-ember/15 to-transparent mix-blend-multiply"></div>
+            <div class="absolute left-6 bottom-6 flex items-center gap-2 text-white/90 text-[12px] tracking-[.14em] uppercase">
+              <span class="w-6 h-px bg-white/70"></span>About me
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-6">
+          <div class="text-[12px] tracking-[.16em] font-semibold uppercase text-brand-ink/70 mb-4 flex items-center gap-3">
+            <span class="inline-block w-8 h-px bg-brand-ink/40"></span>
+            From strategy to delivery
+          </div>
+          <h2 class="font-display text-[36px] sm:text-[44px] lg:text-[54px] leading-[1.04] tracking-tightest text-brand-ink">
+            <span class="text-brand-ink italic">From strategy to delivery,</span> I help teams ship the work that matters.</h2>
+          <p class="mt-6 text-[15.5px] leading-[1.75] text-brand-ink/80 max-w-[560px]">
+            For more than two decades I've led mission-critical software and cloud programs — the kind that span multiple teams, vendors and time zones, and that absolutely cannot slip. I bring the structure, calm and operating cadence to move work from a stuck plan into something that actually ships.
+          </p>
+          <p class="mt-4 text-[15.5px] leading-[1.75] text-brand-ink/80 max-w-[560px]">
+            Alongside delivery, I coach the engineering leaders carrying the weight — directors, VPs and founders navigating scale, change and the human side of building software at the edge.
+          </p>
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a href="#services" class="btn-pill btn-primary inline-flex items-center px-6 h-12 text-[14px] font-semibold">My approach</a>
+            <a href="https://www.linkedin.com/in/nariman-nasef" target="_blank" rel="noopener" class="btn-pill btn-secondary inline-flex items-center px-6 h-12 text-[14px] font-semibold">LinkedIn profile</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="bg-white">
+    <div class="max-w-[88rem] mx-auto px-5 lg:px-10 pb-20 lg:pb-28">
+      <div class="text-center mb-12 lg:mb-16">
+        <div class="text-[12px] tracking-[.16em] font-semibold uppercase text-brand-ink/70 mb-4 flex items-center justify-center gap-3">
+          <span class="inline-block w-8 h-px bg-brand-ink/40"></span>
+          How I work
+          <span class="inline-block w-8 h-px bg-brand-ink/40"></span>
+        </div>
+        <h2 class="font-display text-[34px] sm:text-[42px] lg:text-[52px] leading-[1.05] tracking-tightest text-brand-ink">
+          Three ways <span class="text-brand-ink italic">to work together</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <a href="#contact" class="card group block">
+          <div class="img-treat aspect-[4/5] lift">
+            <img src="https://placehold.co/800x1000/123244/ffffff?text=+" class="w-full h-full object-cover" alt="" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-ink via-brand-ink/30 to-transparent mix-blend-multiply"></div>
+            <div class="absolute left-5 right-5 bottom-5 text-white">
+              <span class="chip text-white/90">Service 01</span>
+              <h3 class="mt-3 font-display text-[24px] leading-[1.15] tracking-tight">
+                Program &amp; project leadership
+              </h3>
+              <p class="mt-2 text-[13.5px] text-white/80 leading-snug">
+                Interim, on-demand leadership for high-stakes software and cloud programs that have to land.
+              </p>
+              <span class="mt-4 inline-flex items-center gap-2 text-[13px] font-semibold text-brand-lime">
+                Discuss a program
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+        <a href="#contact" class="card group block">
+          <div class="img-treat aspect-[4/5] lift">
+            <img src="https://placehold.co/800x1000/2a4d3a/ffffff?text=+" class="w-full h-full object-cover" alt="" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-ink via-brand-ink/30 to-transparent mix-blend-multiply"></div>
+            <div class="absolute left-5 right-5 bottom-5 text-white">
+              <span class="chip text-white/90">Service 02</span>
+              <h3 class="mt-3 font-display text-[24px] leading-[1.15] tracking-tight">
+                Delivery advisory
+              </h3>
+              <p class="mt-2 text-[13.5px] text-white/80 leading-snug">
+                Diagnostics and reset for teams that are stuck — clarity on what to fix first and how to actually ship.
+              </p>
+              <span class="mt-4 inline-flex items-center gap-2 text-[13px] font-semibold text-brand-lime">
+                Get a diagnostic
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+        <a href="#contact" class="card group block">
+          <div class="img-treat aspect-[4/5] lift">
+            <img src="https://placehold.co/800x1000/9b3a1e/ffffff?text=+" class="w-full h-full object-cover" alt="" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-ink via-brand-ink/30 to-transparent mix-blend-multiply"></div>
+            <div class="absolute left-5 right-5 bottom-5 text-white">
+              <span class="chip text-white/90">Service 03</span>
+              <h3 class="mt-3 font-display text-[24px] leading-[1.15] tracking-tight">
+                Executive &amp; leader coaching
+              </h3>
+              <p class="mt-2 text-[13.5px] text-white/80 leading-snug">
+                One-to-one coaching for engineering leaders growing into bigger scope, scale and stakeholders.
+              </p>
+              <span class="mt-4 inline-flex items-center gap-2 text-[13px] font-semibold text-brand-lime">
+                Start coaching
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOGO + INNER NAV STRIP -->
+  <section class="bg-ink-deep text-white">
+    <div class="max-w-[88rem] mx-auto px-5 lg:px-10 py-10 lg:py-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+      <div class="flex items-center gap-4">
+        <svg viewBox="0 0 280 50" class="h-9 w-auto" aria-hidden="true">
+          <text x="0" y="38" font-family="Barlow, sans-serif" font-weight="800" font-size="44" letter-spacing="-2.6" fill="#ffffff">nariman nasef</text>
+          <circle cx="252" cy="14" r="6" fill="#81d10b"/>
+        </svg>
+        <span class="hidden md:inline-block text-white/40 text-[13px] tracking-[.18em] uppercase border-l border-white/15 pl-4">Delivery &amp; coaching, done with rigor and humanity</span>
+      </div>
+      <nav class="flex flex-wrap gap-x-7 gap-y-3 text-[13.5px] text-white/85">
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#services">Services</a>
+        <a class="nav-link" href="#engagements">Engagements</a>
+        <a class="nav-link" href="#coaching">Coaching</a>
+        <a class="nav-link" href="#insights">Insights</a>
+        <a class="nav-link" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </section>
+
+  <!-- ENGAGEMENTS -->
+  <section id="engagements" class="bg-ink-deep text-white">
+    <div class="max-w-[88rem] mx-auto px-5 lg:px-10 pt-6 pb-24 lg:pb-32">
+      <div class="text-center mb-12 lg:mb-16">
+        <div class="text-[12px] tracking-[.16em] font-semibold uppercase text-white/70 mb-4 flex items-center justify-center gap-3">
+          <span class="inline-block w-8 h-px bg-white/40"></span>
+          Where I focus
+          <span class="inline-block w-8 h-px bg-white/40"></span>
+        </div>
+        <h2 class="font-display text-[34px] sm:text-[42px] lg:text-[54px] leading-[1.05] tracking-tightest">
+          The kinds of engagements <span class="text-brand-lime italic">I take on</span>
+        </h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
+        <div class="card group">
+          <div class="img-treat aspect-[3/4] lift">
+            <img src="https://placehold.co/600x800/1f4a5a/ffffff?text=+" class="w-full h-full object-cover" alt="" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-ink via-brand-ink/40 to-transparent mix-blend-multiply"></div>
+            <div class="absolute left-5 right-5 bottom-5">
+              <h3 class="font-display text-[20px] leading-tight tracking-tight text-white">Cloud &amp; platform programs</h3>
+              <p class="mt-1 text-[13px] text-white/75 leading-snug">Multi-region migrations, platform engineering, SRE org design — at scale.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card group">
+          <div class="img-treat aspect-[3/4] lift">
+            <img src="https://placehold.co/600x800/2a5a3f/ffffff?text=+" class="w-full h-full object-cover" alt="" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-ink via-brand-ink/40 to-transparent mix-blend-multiply"></div>
+            <div class="absolute left-5 right-5 bottom-5">
+              <h3 class="font-display text-[20px] leading-tight tracking-tight text-white">Modernisation</h3>
+              <p class="mt-1 text-[13px] text-white/75 leading-snug">Legacy to cloud-native, monolith to services, paydown of accumulated risk.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card group">
+          <div class="img-treat aspect-[3/4] lift">
+            <img src="https://placehold.co/600x800/4a3a2a/ffffff?text=+" class="w-full h-full object-cover" alt="" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-ink via-brand-ink/40 to-transparent mix-blend-multiply"></div>
+            <div class="absolute left-5 right-5 bottom-5">
+              <h3 class="font-display text-[20px] leading-tight tracking-tight text-white">M&amp;A integration</h3>
+              <p class="mt-1 text-[13px] text-white/75 leading-snug">Post-merger software, infrastructure and team integration without losing the year.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card group">
+          <div class="img-treat aspect-[3/4] lift">
+            <img src="https://placehold.co/600x800/8a3a1e/ffffff?text=+" class="w-full h-full object-cover" alt="" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-ink via-brand-ink/40 to-transparent mix-blend-multiply"></div>
+            <div class="absolute left-5 right-5 bottom-5">
+              <h3 class="font-display text-[20px] leading-tight tracking-tight text-white">Scaling teams</h3>
+              <p class="mt-1 text-[13px] text-white/75 leading-snug">Leadership ladders, hiring rhythm, operating cadence, and the rituals that hold them.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COACHING -->
+  <section id="coaching" class="bg-mint-soft">
+    <div class="max-w-[88rem] mx-auto px-5 lg:px-10 py-20 lg:py-28">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div class="lg:col-span-6">
+          <div class="img-treat aspect-[5/4] lift">
+            <img src="https://placehold.co/1100x900/2a4d5a/ffffff?text=+" class="w-full h-full object-cover" alt="" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-ink/40 to-transparent mix-blend-multiply"></div>
+          </div>
+        </div>
+        <div class="lg:col-span-6">
+          <div class="text-[12px] tracking-[.16em] font-semibold uppercase text-brand-ink/70 mb-4 flex items-center gap-3">
+            <span class="inline-block w-8 h-px bg-brand-ink/40"></span>
+            Coaching
+          </div>
+          <h2 class="font-display text-[36px] sm:text-[44px] lg:text-[58px] leading-[1.02] tracking-tightest text-brand-ink">
+            Sharper thinking. <span class="text-brand-ink italic">Steadier delivery.</span>
+          </h2>
+          <p class="mt-6 text-[15.5px] leading-[1.75] text-brand-ink/80 max-w-[560px]">
+            Coaching for engineering leaders carrying real weight — directors stepping into VP scope, founders growing past the team-of-ten, technical leaders learning to lead other leaders. We work on the decisions in front of you, the patterns behind them, and the leader you're becoming through both.
+          </p>
+          <ul class="mt-7 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-[14px] text-brand-ink/85 max-w-[560px]">
+            <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-lime shrink-0"></span>1:1 engagements, 3 or 6 months</li>
+            <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-lime shrink-0"></span>Leadership team offsites</li>
+            <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-lime shrink-0"></span>New-leader 90-day landings</li>
+            <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-lime shrink-0"></span>Difficult-decision sessions</li>
+          </ul>
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#contact" class="btn-pill btn-primary inline-flex items-center px-6 h-12 text-[14px] font-semibold">Explore coaching</a>
+            <a href="#contact" class="btn-pill btn-secondary inline-flex items-center px-6 h-12 text-[14px] font-semibold">Book an intro call</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK WITH ME -->
+  <section id="contact" class="bg-white">
+    <div class="max-w-[88rem] mx-auto px-5 lg:px-10 py-20 lg:py-28">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div class="lg:col-span-7 order-2 lg:order-1">
+          <div class="text-[12px] tracking-[.16em] font-semibold uppercase text-brand-ink/70 mb-4 flex items-center gap-3">
+            <span class="inline-block w-8 h-px bg-brand-ink/40"></span>
+            Working together
+          </div>
+          <h2 class="font-display text-[36px] sm:text-[44px] lg:text-[58px] leading-[1.02] tracking-tightest text-brand-ink">
+            Let's deliver <span class="text-brand-ink italic">something that matters.</span>
+          </h2>
+          <p class="mt-6 text-[15.5px] leading-[1.75] text-brand-ink/80 max-w-[600px]">
+            Most engagements start with a thirty-minute conversation: what you're trying to ship, where it's stuck, and whether I'm the right help. No pitch deck, no obligation — just a useful hour.
+          </p>
+          <ul class="mt-8 grid sm:grid-cols-2 gap-x-8 gap-y-3 text-[14px] text-brand-ink/85 max-w-[600px]">
+            <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-lime shrink-0"></span>Free 30-minute intro call</li>
+            <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-lime shrink-0"></span>Fixed-scope advisory engagements</li>
+            <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-lime shrink-0"></span>Fractional program leadership</li>
+            <li class="flex items-start gap-3"><span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-lime shrink-0"></span>3 or 6-month coaching engagements</li>
+          </ul>
+          <div class="mt-9 flex flex-wrap gap-3">
+            <a href="mailto:kelz9898@gmail.com?subject=Intro%20call" class="btn-pill btn-primary inline-flex items-center px-6 h-12 text-[14px] font-semibold">Book an intro call</a>
+            <a href="mailto:kelz9898@gmail.com" class="btn-pill btn-secondary inline-flex items-center px-6 h-12 text-[14px] font-semibold">kelz9898@gmail.com</a>
+          </div>
+        </div>
+        <div class="lg:col-span-5 order-1 lg:order-2">
+          <div class="img-treat aspect-[4/5] lift">
+            <img src="https://placehold.co/900x1100/c45f3a/ffffff?text=+" class="w-full h-full object-cover" alt="" />
+            <div class="absolute inset-0 bg-gradient-to-t from-brand-ink/45 via-transparent to-transparent mix-blend-multiply"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIGHTS -->
+  <section id="insights" class="bg-mint-soft">
+    <div class="max-w-[88rem] mx-auto px-5 lg:px-10 py-20 lg:py-28">
+      <div class="flex items-end justify-between flex-wrap gap-6 mb-12 lg:mb-16">
+        <div>
+          <div class="text-[12px] tracking-[.16em] font-semibold uppercase text-brand-ink/70 mb-4 flex items-center gap-3">
+            <span class="inline-block w-8 h-px bg-brand-ink/40"></span>
+            Notes &amp; field reports
+          </div>
+          <h2 class="font-display text-[34px] sm:text-[42px] lg:text-[54px] leading-[1.03] tracking-tightest text-brand-ink">
+            Recent <span class="text-brand-ink italic">insights</span>
+          </h2>
+        </div>
+        <a href="#" class="btn-pill btn-secondary inline-flex items-center px-6 h-12 text-[14px] font-semibold">All writing</a>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7">
+        <article class="card group">
+          <div class="img-treat aspect-[4/3] lift">
+            <img src="https://placehold.co/900x680/4a5a3a/ffffff?text=+" class="w-full h-full object-cover" alt="" />
+          </div>
+          <div class="pt-5">
+            <span class="chip">Field note · Apr 2026</span>
+            <h3 class="mt-3 font-display text-[19px] leading-[1.2] tracking-tight text-brand-ink">
+              What I learned reorganising a 300-engineer org for shipping speed
+            </h3>
+          </div>
+        </article>
+        <article class="card group">
+          <div class="img-treat aspect-[4/3] lift">
+            <img src="https://placehold.co/900x680/2a3a4a/ffffff?text=+" class="w-full h-full object-cover" alt="" />
+          </div>
+          <div class="pt-5">
+            <span class="chip">Essay · Mar 2026</span>
+            <h3 class="mt-3 font-display text-[19px] leading-[1.2] tracking-tight text-brand-ink">
+              The case for a delivery operating system, not a delivery process
+            </h3>
+          </div>
+        </article>
+        <article class="card group">
+          <div class="img-treat aspect-[4/3] lift">
+            <img src="https://placehold.co/900x680/8a4a2a/ffffff?text=+" class="w-full h-full object-cover" alt="" />
+          </div>
+          <div class="pt-5">
+            <span class="chip">Coaching · Mar 2026</span>
+            <h3 class="mt-3 font-display text-[19px] leading-[1.2] tracking-tight text-brand-ink">
+              Coaching senior engineers into senior leaders
+            </h3>
+          </div>
+        </article>
+        <article class="card group">
+          <div class="img-treat aspect-[4/3] lift">
+            <img src="https://placehold.co/900x680/3a4a2a/ffffff?text=+" class="w-full h-full object-cover" alt="" />
+          </div>
+          <div class="pt-5">
+            <span class="chip">Field note · Feb 2026</span>
+            <h3 class="mt-3 font-display text-[19px] leading-[1.2] tracking-tight text-brand-ink">
+              Why your migration is late (it's almost never the tech)
+            </h3>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink-deep text-white">
+    <div class="max-w-[88rem] mx-auto px-5 lg:px-10 pt-20 pb-10">
+      <div class="grid lg:grid-cols-12 gap-10">
+        <div class="lg:col-span-5">
+          <svg viewBox="0 0 280 50" class="h-9 w-auto mb-6" aria-hidden="true">
+            <text x="0" y="38" font-family="Barlow, sans-serif" font-weight="800" font-size="44" letter-spacing="-2.6" fill="#ffffff">nariman nasef</text>
+            <circle cx="252" cy="14" r="6" fill="#81d10b"/>
+          </svg>
+          <p class="text-white/70 text-[14px] leading-[1.7] max-w-[380px]">
+            Independent program leadership and executive coaching for engineering teams shipping mission-critical software. Based in Irvine, California. Working globally.
+          </p>
+          <div class="mt-7 flex items-center gap-3">
+            <a href="https://www.linkedin.com/in/nariman-nasef" target="_blank" rel="noopener" aria-label="LinkedIn" class="w-9 h-9 rounded-full ring-1 ring-white/20 flex items-center justify-center hover:bg-white/10 transition">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h4v16H4zM6 2a2 2 0 110 4 2 2 0 010-4zM10 8h4v2.2c.6-1.1 2-2.4 4.2-2.4 4.5 0 4.8 3 4.8 6.2V20h-4v-5.2c0-1.4 0-3.1-2-3.1s-2.3 1.5-2.3 3V20h-4z"/></svg>
+            </a>
+            <a href="mailto:kelz9898@gmail.com" aria-label="Email" class="w-9 h-9 rounded-full ring-1 ring-white/20 flex items-center justify-center hover:bg-white/10 transition">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h4 class="text-[12px] tracking-[.16em] font-semibold uppercase text-brand-lime mb-5">Site</h4>
+          <ul class="space-y-3 text-[14px] text-white/80">
+            <li><a class="hover:text-white" href="#about">About</a></li>
+            <li><a class="hover:text-white" href="#services">Services</a></li>
+            <li><a class="hover:text-white" href="#engagements">Engagements</a></li>
+            <li><a class="hover:text-white" href="#coaching">Coaching</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-2">
+          <h4 class="text-[12px] tracking-[.16em] font-semibold uppercase text-brand-lime mb-5">Work</h4>
+          <ul class="space-y-3 text-[14px] text-white/80">
+            <li><a class="hover:text-white" href="#services">Program leadership</a></li>
+            <li><a class="hover:text-white" href="#services">Delivery advisory</a></li>
+            <li><a class="hover:text-white" href="#coaching">Executive coaching</a></li>
+            <li><a class="hover:text-white" href="#insights">Insights</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-3">
+          <h4 class="text-[12px] tracking-[.16em] font-semibold uppercase text-brand-lime mb-5">Connect</h4>
+          <ul class="space-y-3 text-[14px] text-white/80">
+            <li><a class="hover:text-white" href="mailto:kelz9898@gmail.com">kelz9898@gmail.com</a></li>
+            <li><a class="hover:text-white" href="https://www.linkedin.com/in/nariman-nasef" target="_blank" rel="noopener">linkedin.com/in/nariman-nasef</a></li>
+            <li class="text-white/55">Irvine, California</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-16 pt-7 border-t border-white/10 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-[12.5px] text-white/55">
+        <span>© 2026 Nariman Nasef. All rights reserved.</span>
+        <div class="flex flex-wrap gap-x-6 gap-y-2">
+          <a href="#" class="hover:text-white">Privacy</a>
+          <a href="#" class="hover:text-white">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
