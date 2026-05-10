@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nature's Reel — Nariman Nasef</title>
+  <meta name="description" content="A personal collection from time spent outdoors — coming soon." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%23c8362e'/><text x='32' y='44' font-family='Helvetica,Arial,sans-serif' font-weight='900' font-size='30' letter-spacing='-1.5' text-anchor='middle' fill='%23ffffff'>NN</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><circle cx='32' cy='32' r='30' fill='%23c8362e'/><text x='32' y='44' font-family='Helvetica,Arial,sans-serif' font-weight='900' font-size='30' letter-spacing='-1.5' text-anchor='middle' fill='%23ffffff'>NN</text></svg>" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:    { DEFAULT: '#15151f', soft: '#1f1f2c', deep: '#0e0e16' },
+            paper:  { DEFAULT: '#ffffff', soft: '#f6f5f1', warm: '#efece4' },
+            line:   '#e8e6df',
+            accent: { DEFAULT: '#c8362e', deep: '#a72820', soft: '#e6584f' },
+            mute:   '#5a5a66',
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            sans:    ['Inter', 'system-ui', 'sans-serif'],
+            mono:    ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+          },
+          letterSpacing: { tightest: '-0.035em' },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; color: #15151f; background: #ffffff; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 800; letter-spacing: -0.035em; }
+    .eyebrow { display: inline-flex; align-items: center; gap: .7rem; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.18em; color: #c8362e; font-weight: 500; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 28px; height: 2px; background: #c8362e; }
+    .btn-primary { background: #c8362e; color: #fff; padding: 16px 28px; border-radius: 999px; font-size: 13.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; display: inline-flex; align-items: center; gap: .7rem; transition: transform .25s, background .25s, box-shadow .25s; box-shadow: 0 12px 28px -14px rgba(200,54,46,.55); }
+    .btn-primary:hover { background: #a72820; transform: translateY(-1px); }
+    .btn-outline-dark { background: transparent; color: #15151f; border: 1.5px solid #d4d2cc; padding: 14px 26px; border-radius: 999px; font-size: 13.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; display: inline-flex; align-items: center; gap: .6rem; transition: transform .25s, border-color .25s, background .25s; }
+    .btn-outline-dark:hover { border-color: #15151f; background: #f6f5f1; transform: translateY(-1px); }
+    .nav-link { position: relative; }
+    .nav-link::after { content:""; position:absolute; left:0; bottom:-6px; height:2px; width:0; background:#c8362e; transition: width .3s; }
+    .nav-link:hover::after, .nav-link.is-active::after { width: 100%; }
+    .top-bar { background: #0e0e16; color: #a8a8b5; font-size: 12.5px; }
+    .top-bar a:hover { color: #fff; }
+  </style>
+</head>
+<body class="flex flex-col min-h-screen">
+
+  <!-- TOP UTILITY BAR -->
+  <div class="top-bar">
+    <div class="max-w-[82rem] mx-auto px-5 lg:px-8 h-10 flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <span class="hidden md:inline">California</span>
+        <span class="hidden md:inline text-white/30">|</span>
+        <a data-u="narimannasef11" data-d="gmail.com" href="#" class="email-show hover:text-white transition">narimannasef11 [at] gmail [dot] com</a>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="https://www.linkedin.com/in/nariman-nasef" target="_blank" rel="noopener" aria-label="LinkedIn" class="hover:text-white transition">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h4v16H4zM6 2a2 2 0 110 4 2 2 0 010-4zM10 8h4v2.2c.6-1.1 2-2.4 4.2-2.4 4.5 0 4.8 3 4.8 6.2V20h-4v-5.2c0-1.4 0-3.1-2-3.1s-2.3 1.5-2.3 3V20h-4z"/></svg>
+        </a>
+        <a data-u="narimannasef11" data-d="gmail.com" href="#" aria-label="Email" class="hover:text-white transition">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 bg-white border-b border-line shadow-[0_1px_0_rgba(0,0,0,0.02)]">
+    <div class="max-w-[82rem] mx-auto px-5 lg:px-8 pt-5 pb-3">
+      <div class="relative flex items-center justify-center pb-4">
+        <a href="/" class="text-center" aria-label="Nariman Nasef">
+          <div class="inline-flex items-baseline gap-2">
+            <span class="font-display text-[28px] tracking-tightest text-ink">Nariman</span>
+            <span class="w-2 h-2 rounded-full bg-accent translate-y-[-2px]"></span>
+            <span class="font-display text-[28px] tracking-tightest text-ink">Nasef</span>
+          </div>
+          <div class="mt-2 font-mono text-[10.5px] tracking-[.22em] uppercase" style="color:#c8362e;">
+            Leadership <span style="color:#e6a39e;" class="mx-2">|</span> Planning <span style="color:#e6a39e;" class="mx-2">|</span> Collaboration <span style="color:#e6a39e;" class="mx-2">|</span> Delivery
+          </div>
+        </a>
+        <div class="absolute right-0 top-0 flex items-center gap-3">
+          <a href="/#contact" class="btn-primary hidden md:inline-flex">
+            Book intro
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <nav class="hidden lg:flex items-center justify-center gap-6 xl:gap-8 text-[13px] xl:text-[13.5px] font-medium text-ink whitespace-nowrap">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/#about">About</a>
+        <a class="nav-link" href="/#services">Services</a>
+        <a class="nav-link" href="/#approach">Approach</a>
+        <a class="nav-link" href="/#articles">Articles</a>
+        <a class="nav-link" href="/#memberships">Memberships &amp; Awards</a>
+        <a class="nav-link" href="/community-work.html">Community Work</a>
+        <a class="nav-link is-active" href="/natures-reel.html">Nature's Reel</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- COMING SOON -->
+  <main class="flex-1 bg-paper-soft flex items-center">
+    <div class="max-w-[60rem] mx-auto px-5 lg:px-8 py-24 lg:py-32 text-center">
+      <span class="eyebrow mb-6 inline-flex">Personal</span>
+      <h1 class="mt-4 font-display text-ink text-[44px] sm:text-[60px] lg:text-[76px] leading-[1.02]">
+        Nature's Reel
+      </h1>
+      <p class="mt-8 text-[17px] leading-[1.7] text-ink-soft max-w-[560px] mx-auto">
+        A personal collection from time spent outdoors. The other practice that keeps everything else in proportion.
+      </p>
+      <div class="mt-12 inline-flex items-center gap-3 px-6 py-3 rounded-full border border-line bg-white">
+        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
+        <span class="font-mono text-[12px] tracking-[.18em] uppercase text-mute">Coming soon</span>
+      </div>
+      <div class="mt-14">
+        <a href="/" class="btn-outline-dark">Back to home</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink-deep text-white/55">
+    <div class="max-w-[82rem] mx-auto px-5 lg:px-8 py-10 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-[12.5px]">
+      <div class="flex items-center gap-2.5">
+        <span>© 2026 Nariman Nasef. All rights reserved.</span>
+      </div>
+      <div class="flex flex-wrap gap-x-5 gap-y-2">
+        <a href="/#about" class="hover:text-white">About</a>
+        <a href="/#services" class="hover:text-white">Services</a>
+        <a href="/#approach" class="hover:text-white">Approach</a>
+        <a href="/#articles" class="hover:text-white">Articles</a>
+        <a href="/#memberships" class="hover:text-white">Memberships &amp; Awards</a>
+        <a href="/community-work.html" class="hover:text-white">Community Work</a>
+        <a href="/natures-reel.html" class="hover:text-white">Nature's Reel</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Runtime email assembly — keeps the address out of the static HTML
+    (function () {
+      var at = String.fromCharCode(64);
+      var prefix = 'mai' + 'lto:';
+      document.querySelectorAll('[data-u][data-d]').forEach(function (el) {
+        var addr = el.getAttribute('data-u') + at + el.getAttribute('data-d');
+        var s = el.getAttribute('data-s');
+        el.setAttribute('href', prefix + addr + (s ? '?subject=' + s : ''));
+        if (el.classList.contains('email-show')) el.textContent = addr;
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -130,15 +130,24 @@
       mix-blend-mode: overlay;
     }
 
-    /* Photo overlay for service tiles */
+    /* Photo overlay for service tiles — image kept faint so the text leads */
     .photo-tile {
       position: relative; overflow: hidden; border-radius: 6px;
+      background: #15151f;
     }
-    .photo-tile img { transition: transform .8s cubic-bezier(.2,.7,.2,1); }
-    .photo-tile:hover img { transform: scale(1.04); }
+    .photo-tile img {
+      opacity: .55;
+      filter: grayscale(35%) brightness(0.78) contrast(0.95);
+      transition: transform .8s cubic-bezier(.2,.7,.2,1), opacity .5s, filter .5s;
+    }
+    .photo-tile:hover img {
+      transform: scale(1.04);
+      opacity: .72;
+      filter: grayscale(15%) brightness(0.88) contrast(1);
+    }
     .photo-tile::after {
       content: ""; position: absolute; inset: 0; pointer-events: none;
-      background: linear-gradient(180deg, rgba(20,20,28,0.05) 0%, rgba(20,20,28,0.85) 100%);
+      background: linear-gradient(180deg, rgba(20,20,28,0.35) 0%, rgba(20,20,28,0.92) 100%);
     }
 
     /* Feature card (dark tile under hero) */
@@ -199,13 +208,13 @@
       <div class="flex items-center gap-6">
         <span class="hidden md:inline">California</span>
         <span class="hidden md:inline text-white/30">|</span>
-        <a href="mailto:narimannasef11@gmail.com" class="hover:text-white transition">narimannasef11@gmail.com</a>
+        <a data-u="narimannasef11" data-d="gmail.com" href="#" class="email-show hover:text-white transition">narimannasef11 [at] gmail [dot] com</a>
       </div>
       <div class="flex items-center gap-5">
         <a href="https://www.linkedin.com/in/nariman-nasef" target="_blank" rel="noopener" aria-label="LinkedIn" class="hover:text-white transition">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h4v16H4zM6 2a2 2 0 110 4 2 2 0 010-4zM10 8h4v2.2c.6-1.1 2-2.4 4.2-2.4 4.5 0 4.8 3 4.8 6.2V20h-4v-5.2c0-1.4 0-3.1-2-3.1s-2.3 1.5-2.3 3V20h-4z"/></svg>
         </a>
-        <a href="mailto:narimannasef11@gmail.com" aria-label="Email" class="hover:text-white transition">
+        <a data-u="narimannasef11" data-d="gmail.com" href="#" aria-label="Email" class="hover:text-white transition">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
         </a>
       </div>
@@ -218,13 +227,13 @@
       <!-- Brand block, centered, with CTA floated right -->
       <div class="relative flex items-center justify-center pb-4">
         <a href="#" class="text-center" aria-label="Nariman Nasef">
-          <div class="inline-flex items-baseline gap-2">
-            <span class="font-display text-[28px] tracking-tightest text-ink">Nariman</span>
-            <span class="w-2 h-2 rounded-full bg-accent translate-y-[-2px]"></span>
-            <span class="font-display text-[28px] tracking-tightest text-ink">Nasef</span>
+          <div class="inline-flex items-baseline gap-2.5">
+            <span class="font-display text-[34px] sm:text-[38px] tracking-tightest text-ink">Nariman</span>
+            <span class="w-2.5 h-2.5 rounded-full bg-accent translate-y-[-3px]"></span>
+            <span class="font-display text-[34px] sm:text-[38px] tracking-tightest text-ink">Nasef</span>
           </div>
-          <div class="mt-2 font-mono text-[10.5px] tracking-[.22em] uppercase" style="color:#c8362e;">
-            Leadership <span style="color:#e6a39e;" class="mx-2">|</span> Planning <span style="color:#e6a39e;" class="mx-2">|</span> Collaboration <span style="color:#e6a39e;" class="mx-2">|</span> Delivery
+          <div class="mt-2.5 font-mono text-[12.5px] font-semibold tracking-[.24em] uppercase" style="color:#c8362e;">
+            Leadership <span style="color:#c8362e;opacity:.55;" class="mx-2.5">|</span> Planning <span style="color:#c8362e;opacity:.55;" class="mx-2.5">|</span> Collaboration <span style="color:#c8362e;opacity:.55;" class="mx-2.5">|</span> Delivery
           </div>
         </a>
         <div class="absolute right-0 top-0 flex items-center gap-3">
@@ -245,8 +254,8 @@
         <a class="nav-link" href="#approach">Approach</a>
         <a class="nav-link" href="#articles">Articles</a>
         <a class="nav-link" href="#memberships">Memberships &amp; Awards</a>
-        <a class="nav-link" href="#community">Community Work</a>
-        <a class="nav-link" href="#nature">Nature's Reel</a>
+        <a class="nav-link" href="/community-work.html">Community Work</a>
+        <a class="nav-link" href="/natures-reel.html">Nature's Reel</a>
       </nav>
     </div>
   </header>
@@ -486,75 +495,86 @@
     </div>
   </section>
 
-  <!-- ============== CASE STUDIES / FIELD NOTES ============== -->
+  <!-- ============== ARTICLES ============== -->
   <section id="articles" class="bg-white">
     <div class="max-w-[82rem] mx-auto px-5 lg:px-8 pad-sec">
       <div class="grid lg:grid-cols-12 gap-10 items-end mb-14">
         <div class="lg:col-span-8">
-          <span class="eyebrow mb-5">Field notes</span>
+          <span class="eyebrow mb-5">Writing</span>
           <h2 class="mt-4 font-display text-ink text-[36px] sm:text-[48px] lg:text-[56px] leading-[1.05]">
-            Selected case studies
+            Articles
           </h2>
         </div>
         <div class="lg:col-span-3 lg:col-start-10 self-end lg:text-right">
-          <a href="#contact" class="arrow-link">
-            View all work
+          <a href="https://www.linkedin.com/in/nariman-nasef" target="_blank" rel="noopener" class="arrow-link">
+            More on LinkedIn
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
         </div>
       </div>
 
       <div class="grid md:grid-cols-3 gap-6">
+
         <article class="group">
-          <a href="#" class="block aspect-[4/3] rounded-md overflow-hidden mb-5 relative">
-            <img src="https://placehold.co/800x600/2a3344/ffffff?text=+" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="" />
-            <span class="absolute top-4 left-4 bg-accent text-white text-[10.5px] uppercase tracking-[.16em] px-3 py-1.5 rounded-full font-semibold">Cloud program</span>
+          <a href="https://www.agile-thoughts.com/article/6-agile-leadership/" target="_blank" rel="noopener" class="block aspect-[4/3] rounded-md overflow-hidden mb-5 relative bg-ink">
+            <div class="absolute inset-0 flex items-end p-7">
+              <span class="font-display text-white text-[28px] sm:text-[32px] tracking-tightest leading-[1.05]">Agile Leadership</span>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-br from-accent/30 via-transparent to-transparent mix-blend-overlay"></div>
+            <span class="absolute top-4 left-4 bg-accent text-white text-[10.5px] uppercase tracking-[.16em] px-3 py-1.5 rounded-full font-semibold">Agile Thoughts</span>
           </a>
           <h3 class="font-display text-[22px] tracking-tightest text-ink leading-tight">
-            Reorganising a 300-engineer org for shipping speed
+            Agile Leadership
           </h3>
           <p class="mt-2 text-[14.5px] text-mute leading-[1.6]">
-            Three months of work and an honest read on what actually moves throughput when you cross a hundred engineers.
+            What real agile leadership looks like once the rituals are no longer the point.
           </p>
-          <a href="#" class="mt-4 arrow-link">
-            Read field note
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          <a href="https://www.agile-thoughts.com/article/6-agile-leadership/" target="_blank" rel="noopener" class="mt-4 arrow-link">
+            Read on Agile Thoughts
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg>
           </a>
         </article>
 
         <article class="group">
-          <a href="#" class="block aspect-[4/3] rounded-md overflow-hidden mb-5 relative">
-            <img src="https://placehold.co/800x600/3a3327/ffffff?text=+" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="" />
-            <span class="absolute top-4 left-4 bg-accent text-white text-[10.5px] uppercase tracking-[.16em] px-3 py-1.5 rounded-full font-semibold">Advisory</span>
+          <a href="https://www.linkedin.com/pulse/certifications-pmp-pmi-acp-nariman-nasef/" target="_blank" rel="noopener" class="block aspect-[4/3] rounded-md overflow-hidden mb-5 relative bg-ink">
+            <div class="absolute inset-0 flex items-end p-7">
+              <span class="font-display text-white text-[26px] sm:text-[30px] tracking-tightest leading-[1.05]">Certifications:<br/>PMP or PMI-ACP?</span>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-br from-accent/20 via-transparent to-transparent mix-blend-overlay"></div>
+            <span class="absolute top-4 left-4 bg-accent text-white text-[10.5px] uppercase tracking-[.16em] px-3 py-1.5 rounded-full font-semibold">LinkedIn Pulse</span>
           </a>
           <h3 class="font-display text-[22px] tracking-tightest text-ink leading-tight">
-            A delivery operating system, not a delivery process
+            Certifications — PMP or PMI-ACP?
           </h3>
           <p class="mt-2 text-[14.5px] text-mute leading-[1.6]">
-            Why most process rollouts decay — and what stays in place after the consultants leave.
+            A practical look at when each PMI credential earns its keep for working program leaders.
           </p>
-          <a href="#" class="mt-4 arrow-link">
-            Read essay
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          <a href="https://www.linkedin.com/pulse/certifications-pmp-pmi-acp-nariman-nasef/" target="_blank" rel="noopener" class="mt-4 arrow-link">
+            Read on LinkedIn
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg>
           </a>
         </article>
 
         <article class="group">
-          <a href="#" class="block aspect-[4/3] rounded-md overflow-hidden mb-5 relative">
-            <img src="https://placehold.co/800x600/4a2924/ffffff?text=+" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="" />
-            <span class="absolute top-4 left-4 bg-accent text-white text-[10.5px] uppercase tracking-[.16em] px-3 py-1.5 rounded-full font-semibold">Coaching</span>
+          <a href="https://www.linkedin.com/pulse/get-done-perfection-nariman-nasef/" target="_blank" rel="noopener" class="block aspect-[4/3] rounded-md overflow-hidden mb-5 relative bg-ink">
+            <div class="absolute inset-0 flex items-end p-7">
+              <span class="font-display text-white text-[28px] sm:text-[32px] tracking-tightest leading-[1.05]">Get it done<br/>or perfect it?</span>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-br from-accent/25 via-transparent to-transparent mix-blend-overlay"></div>
+            <span class="absolute top-4 left-4 bg-accent text-white text-[10.5px] uppercase tracking-[.16em] px-3 py-1.5 rounded-full font-semibold">LinkedIn Pulse</span>
           </a>
           <h3 class="font-display text-[22px] tracking-tightest text-ink leading-tight">
-            Coaching senior engineers into senior leaders
+            Get it done or perfect it?
           </h3>
           <p class="mt-2 text-[14.5px] text-mute leading-[1.6]">
-            The handful of mindset shifts that separate "great IC promoted into leadership" from "real leader."
+            On the trade-off between shipping and polishing — and the leadership cost of getting it wrong.
           </p>
-          <a href="#" class="mt-4 arrow-link">
-            Read field note
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          <a href="https://www.linkedin.com/pulse/get-done-perfection-nariman-nasef/" target="_blank" rel="noopener" class="mt-4 arrow-link">
+            Read on LinkedIn
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg>
           </a>
         </article>
+
       </div>
     </div>
   </section>
@@ -566,89 +586,95 @@
         <div class="lg:col-span-8">
           <span class="eyebrow mb-5">Recognition</span>
           <h2 class="mt-4 font-display text-ink text-[36px] sm:text-[48px] lg:text-[56px] leading-[1.05]">
-            Memberships &amp; awards
+            Awards &amp; recognition
           </h2>
         </div>
         <div class="lg:col-span-4 lg:col-start-9">
           <p class="text-[16px] leading-[1.7] text-mute">
-            Professional memberships, certifications and recognitions earned across two decades of program delivery and leadership coaching.
+            A selection of awards received over twenty-plus years across enterprise delivery, agile leadership, team collaboration, and public speaking. Professional memberships and certifications coming soon.
           </p>
         </div>
       </div>
 
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        <div class="bg-white rounded-md p-7 border border-line relative">
-          <span class="absolute top-5 right-6 font-mono text-[12px] tracking-[.18em] text-accent/70">/01</span>
-          <div class="w-12 h-12 rounded-full bg-accent/10 text-accent flex items-center justify-center mb-5">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
-          </div>
-          <h3 class="font-display text-[20px] tracking-tightest text-ink leading-tight">Professional memberships</h3>
-          <p class="mt-3 text-[14px] leading-[1.65] text-mute">Industry bodies and standards organisations — coming soon.</p>
-        </div>
-        <div class="bg-white rounded-md p-7 border border-line relative">
-          <span class="absolute top-5 right-6 font-mono text-[12px] tracking-[.18em] text-accent/70">/02</span>
-          <div class="w-12 h-12 rounded-full bg-accent/10 text-accent flex items-center justify-center mb-5">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="6" y="3" width="12" height="14" rx="2"/><path d="M9 21l3-3 3 3"/></svg>
-          </div>
-          <h3 class="font-display text-[20px] tracking-tightest text-ink leading-tight">Certifications</h3>
-          <p class="mt-3 text-[14px] leading-[1.65] text-mute">PM, agile, coaching and technical credentials — coming soon.</p>
-        </div>
-        <div class="bg-white rounded-md p-7 border border-line relative">
-          <span class="absolute top-5 right-6 font-mono text-[12px] tracking-[.18em] text-accent/70">/03</span>
-          <div class="w-12 h-12 rounded-full bg-accent/10 text-accent flex items-center justify-center mb-5">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="9" r="6"/><path d="M9 14l-2 7 5-3 5 3-2-7"/></svg>
-          </div>
-          <h3 class="font-display text-[20px] tracking-tightest text-ink leading-tight">Awards &amp; recognition</h3>
-          <p class="mt-3 text-[14px] leading-[1.65] text-mute">Industry recognitions and honours — coming soon.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+      <!-- Awards timeline list -->
+      <div class="bg-white rounded-md border border-line divide-y divide-line">
 
-  <!-- ============== COMMUNITY WORK ============== -->
-  <section id="community" class="bg-white">
-    <div class="max-w-[82rem] mx-auto px-5 lg:px-8 pad-sec">
-      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        <div class="lg:col-span-5 order-2 lg:order-1">
-          <span class="eyebrow mb-5">Giving back</span>
-          <h2 class="mt-4 font-display text-ink text-[36px] sm:text-[48px] lg:text-[56px] leading-[1.05]">
-            Community work
-          </h2>
-          <p class="mt-6 text-[16.5px] leading-[1.75] text-ink-soft">
-            Pro-bono engagements, mentorship, and volunteer work — the part of the practice that keeps the rest honest.
-          </p>
-          <p class="mt-4 text-[16.5px] leading-[1.75] text-ink-soft">
-            <em>Content coming soon — organisations supported, programs led, and the people who shaped the work.</em>
-          </p>
-          <div class="mt-8">
-            <a href="#contact" class="btn-outline-dark">
-              Discuss collaboration
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-            </a>
+        <article class="grid sm:grid-cols-12 gap-3 sm:gap-6 px-6 sm:px-8 py-6 items-baseline">
+          <div class="sm:col-span-3 lg:col-span-2 font-mono text-[13px] tracking-[.06em] text-accent">/2024</div>
+          <div class="sm:col-span-9 lg:col-span-10">
+            <h3 class="font-display text-[18px] tracking-tightest text-ink leading-snug">IBM Quarterly Growth Award</h3>
           </div>
-        </div>
-        <div class="lg:col-span-7 order-1 lg:order-2">
-          <div class="relative aspect-[4/3] rounded-md overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&amp;fit=crop&amp;w=1200&amp;h=900&amp;q=80" class="w-full h-full object-cover" alt="People collaborating in a community setting" loading="lazy" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </article>
 
-  <!-- ============== NATURE'S REEL ============== -->
-  <section id="nature" class="bg-paper-soft">
-    <div class="max-w-[72rem] mx-auto px-5 lg:px-8 pad-sec text-center">
-      <span class="eyebrow mb-5 inline-flex">Personal</span>
-      <h2 class="mt-4 font-display text-ink text-[36px] sm:text-[48px] lg:text-[56px] leading-[1.05]">
-        Nature's Reel
-      </h2>
-      <p class="mt-6 text-[16px] leading-[1.7] text-mute max-w-[560px] mx-auto">
-        A personal collection from time spent outdoors. The other practice that keeps everything else in proportion.
-      </p>
-      <div class="mt-10 inline-flex items-center gap-3 px-6 py-3 rounded-full border border-line bg-white">
-        <span class="w-2 h-2 rounded-full bg-accent animate-pulse"></span>
-        <span class="font-mono text-[12px] tracking-[.18em] uppercase text-mute">Coming soon</span>
+        <article class="grid sm:grid-cols-12 gap-3 sm:gap-6 px-6 sm:px-8 py-6 items-baseline">
+          <div class="sm:col-span-3 lg:col-span-2 font-mono text-[13px] tracking-[.06em] text-accent">/2023</div>
+          <div class="sm:col-span-9 lg:col-span-10">
+            <h3 class="font-display text-[18px] tracking-tightest text-ink leading-snug">IBM Cultural Catalyst Award</h3>
+          </div>
+        </article>
+
+        <article class="grid sm:grid-cols-12 gap-3 sm:gap-6 px-6 sm:px-8 py-6 items-baseline">
+          <div class="sm:col-span-3 lg:col-span-2 font-mono text-[13px] tracking-[.06em] text-accent">/2020 · /2021</div>
+          <div class="sm:col-span-9 lg:col-span-10">
+            <h3 class="font-display text-[18px] tracking-tightest text-ink leading-snug">IBM Equity Award</h3>
+            <p class="mt-1 text-[13.5px] text-mute">Two-time recipient.</p>
+          </div>
+        </article>
+
+        <article class="grid sm:grid-cols-12 gap-3 sm:gap-6 px-6 sm:px-8 py-6 items-baseline">
+          <div class="sm:col-span-3 lg:col-span-2 font-mono text-[13px] tracking-[.06em] text-accent">/2014 · /2020</div>
+          <div class="sm:col-span-9 lg:col-span-10">
+            <h3 class="font-display text-[18px] tracking-tightest text-ink leading-snug">IBM Software Group Eminence and Excellence Award</h3>
+            <p class="mt-1 text-[13.5px] text-mute">Two-time recipient.</p>
+          </div>
+        </article>
+
+        <article class="grid sm:grid-cols-12 gap-3 sm:gap-6 px-6 sm:px-8 py-6 items-baseline">
+          <div class="sm:col-span-3 lg:col-span-2 font-mono text-[13px] tracking-[.06em] text-accent">/2019</div>
+          <div class="sm:col-span-9 lg:col-span-10">
+            <h3 class="font-display text-[18px] tracking-tightest text-ink leading-snug">Toastmasters Speech Contest</h3>
+            <p class="mt-1 text-[13.5px] text-mute">1st place — club · 1st place — area · 3rd place — division (March 2019).</p>
+          </div>
+        </article>
+
+        <article class="grid sm:grid-cols-12 gap-3 sm:gap-6 px-6 sm:px-8 py-6 items-baseline">
+          <div class="sm:col-span-3 lg:col-span-2 font-mono text-[13px] tracking-[.06em] text-accent">/2017 · /2018</div>
+          <div class="sm:col-span-9 lg:col-span-10">
+            <h3 class="font-display text-[18px] tracking-tightest text-ink leading-snug">IBM Agile Team Award</h3>
+            <p class="mt-1 text-[13.5px] text-mute">3rd place (2017) · 2nd place (2018).</p>
+          </div>
+        </article>
+
+        <article class="grid sm:grid-cols-12 gap-3 sm:gap-6 px-6 sm:px-8 py-6 items-baseline">
+          <div class="sm:col-span-3 lg:col-span-2 font-mono text-[13px] tracking-[.06em] text-accent">/2016</div>
+          <div class="sm:col-span-9 lg:col-span-10">
+            <h3 class="font-display text-[18px] tracking-tightest text-ink leading-snug">IBM Team Leadership &amp; Group Collaboration Awards</h3>
+            <p class="mt-1 text-[13.5px] text-mute">Four awards in a single year.</p>
+          </div>
+        </article>
+
+        <article class="grid sm:grid-cols-12 gap-3 sm:gap-6 px-6 sm:px-8 py-6 items-baseline">
+          <div class="sm:col-span-3 lg:col-span-2 font-mono text-[13px] tracking-[.06em] text-accent">Multi-year</div>
+          <div class="sm:col-span-9 lg:col-span-10">
+            <h3 class="font-display text-[18px] tracking-tightest text-ink leading-snug">IBM Manager Choice Award</h3>
+            <p class="mt-1 text-[13.5px] text-mute">Three-time recipient.</p>
+          </div>
+        </article>
+
+        <article class="grid sm:grid-cols-12 gap-3 sm:gap-6 px-6 sm:px-8 py-6 items-baseline">
+          <div class="sm:col-span-3 lg:col-span-2 font-mono text-[13px] tracking-[.06em] text-accent">/2009</div>
+          <div class="sm:col-span-9 lg:col-span-10">
+            <h3 class="font-display text-[18px] tracking-tightest text-ink leading-snug">Toastmasters Competent Leadership Award</h3>
+          </div>
+        </article>
+
+        <article class="grid sm:grid-cols-12 gap-3 sm:gap-6 px-6 sm:px-8 py-6 items-baseline">
+          <div class="sm:col-span-3 lg:col-span-2 font-mono text-[13px] tracking-[.06em] text-accent">/2008</div>
+          <div class="sm:col-span-9 lg:col-span-10">
+            <h3 class="font-display text-[18px] tracking-tightest text-ink leading-snug">Toastmasters Competent Communicator Award</h3>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
@@ -681,7 +707,7 @@
           </p>
         </div>
         <div class="lg:col-span-4 lg:text-right">
-          <a href="mailto:narimannasef11@gmail.com?subject=Intro%20call" class="btn-primary">
+          <a data-u="narimannasef11" data-d="gmail.com" data-s="Intro%20call" href="#" class="btn-primary">
             Book an intro call
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
           </a>
@@ -691,7 +717,7 @@
       <div class="mt-16 pt-10 border-t border-white/10 grid sm:grid-cols-2 lg:grid-cols-4 gap-6 text-[13.5px]">
         <div>
           <span class="text-[11px] font-mono uppercase tracking-[.18em] text-white/55 block mb-3">Email</span>
-          <a class="text-white hover:underline" href="mailto:narimannasef11@gmail.com">narimannasef11@gmail.com</a>
+          <a data-u="narimannasef11" data-d="gmail.com" href="#" class="email-show text-white hover:underline">narimannasef11 [at] gmail [dot] com</a>
         </div>
         <div>
           <span class="text-[11px] font-mono uppercase tracking-[.18em] text-white/55 block mb-3">LinkedIn</span>
@@ -721,11 +747,24 @@
         <a href="#approach" class="hover:text-white">Approach</a>
         <a href="#articles" class="hover:text-white">Articles</a>
         <a href="#memberships" class="hover:text-white">Memberships &amp; Awards</a>
-        <a href="#community" class="hover:text-white">Community Work</a>
-        <a href="#nature" class="hover:text-white">Nature's Reel</a>
+        <a href="/community-work.html" class="hover:text-white">Community Work</a>
+        <a href="/natures-reel.html" class="hover:text-white">Nature's Reel</a>
       </div>
     </div>
   </footer>
 
+  <script>
+    // Runtime email assembly — keeps the address out of the static HTML
+    (function () {
+      var at = String.fromCharCode(64);
+      var prefix = 'mai' + 'lto:';
+      document.querySelectorAll('[data-u][data-d]').forEach(function (el) {
+        var addr = el.getAttribute('data-u') + at + el.getAttribute('data-d');
+        var s = el.getAttribute('data-s');
+        el.setAttribute('href', prefix + addr + (s ? '?subject=' + s : ''));
+        if (el.classList.contains('email-show')) el.textContent = addr;
+      });
+    })();
+  </script>
 </body>
 </html>
