@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Testimonials — Nariman Nasef</title>
+  <meta name="description" content="Recommendations from colleagues, mentees, and partners — gathered through the Leland platform." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='8' fill='%23c8362e'/><text x='32' y='50' font-family='Helvetica,Arial,sans-serif' font-weight='900' font-size='44' letter-spacing='-3' text-anchor='middle' fill='%23ffffff'>NN</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='8' fill='%23c8362e'/><text x='32' y='50' font-family='Helvetica,Arial,sans-serif' font-weight='900' font-size='44' letter-spacing='-3' text-anchor='middle' fill='%23ffffff'>NN</text></svg>" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:    { DEFAULT: '#15151f', soft: '#1f1f2c', deep: '#0e0e16' },
+            paper:  { DEFAULT: '#ffffff', soft: '#f6f5f1', warm: '#efece4' },
+            line:   '#e8e6df',
+            accent: { DEFAULT: '#c8362e', deep: '#a72820', soft: '#e6584f' },
+            mute:   '#5a5a66',
+          },
+          fontFamily: {
+            display: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            sans:    ['Inter', 'system-ui', 'sans-serif'],
+            mono:    ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+          },
+          letterSpacing: { tightest: '-0.035em' },
+        },
+      },
+    };
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', system-ui, sans-serif; color: #15151f; background: #ffffff; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'Plus Jakarta Sans', system-ui, sans-serif; font-weight: 800; letter-spacing: -0.035em; }
+    .eyebrow { display: inline-flex; align-items: center; gap: .7rem; font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 0.18em; color: #c8362e; font-weight: 500; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 28px; height: 2px; background: #c8362e; }
+    .btn-primary { background: #c8362e; color: #fff; padding: 16px 28px; border-radius: 999px; font-size: 13.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; display: inline-flex; align-items: center; gap: .7rem; transition: transform .25s, background .25s, box-shadow .25s; box-shadow: 0 12px 28px -14px rgba(200,54,46,.55); }
+    .btn-primary:hover { background: #a72820; transform: translateY(-1px); }
+    .btn-outline-dark { background: transparent; color: #15151f; border: 1.5px solid #d4d2cc; padding: 14px 26px; border-radius: 999px; font-size: 13.5px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; display: inline-flex; align-items: center; gap: .6rem; transition: transform .25s, border-color .25s, background .25s; }
+    .btn-outline-dark:hover { border-color: #15151f; background: #f6f5f1; transform: translateY(-1px); }
+    .nav-link { position: relative; }
+    .nav-link::after { content:""; position:absolute; left:0; bottom:-6px; height:2px; width:0; background:#c8362e; transition: width .3s; }
+    .nav-link:hover::after, .nav-link.is-active::after { width: 100%; }
+    .top-bar { background: #0e0e16; color: #d4d4dc; font-size: 12.5px; }
+    .top-bar a { color: #ffffff; transition: color .2s; }
+    .top-bar a:hover { color: #e6584f; }
+    .hero-bg { position: relative; background: linear-gradient(135deg, rgba(20,20,28,0.86) 0%, rgba(20,20,28,0.45) 55%, rgba(20,20,28,0.30) 100%), radial-gradient(70% 70% at 70% 30%, #5a3329 0%, #1e1e28 65%); overflow: hidden; }
+    .hero-bg::after { content: ""; position: absolute; inset: 0; pointer-events: none; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>"); opacity: .55; mix-blend-mode: overlay; }
+    .pad-sec { padding-top: 5rem; padding-bottom: 5rem; }
+    @media (max-width: 768px) { .pad-sec { padding-top: 3rem; padding-bottom: 3rem; } }
+
+    /* Masonry-style testimonial layout */
+    .t-grid { columns: 1; column-gap: 1.5rem; }
+    @media (min-width: 768px)  { .t-grid { columns: 2; } }
+    @media (min-width: 1280px) { .t-grid { columns: 3; } }
+    .t-card { break-inside: avoid; -webkit-column-break-inside: avoid; page-break-inside: avoid; margin-bottom: 1.5rem; display: block; }
+  </style>
+</head>
+<body>
+
+  <!-- TOP UTILITY BAR -->
+  <div class="top-bar">
+    <div class="max-w-[82rem] mx-auto px-5 lg:px-8 h-10 flex items-center justify-between">
+      <div class="flex items-center gap-6">
+        <span class="hidden md:inline">California</span>
+        <span class="hidden md:inline text-white/30">|</span>
+        <a data-u="narimannasef11" data-d="gmail.com" href="#" class="email-show hover:text-white transition">narimannasef11 [at] gmail [dot] com</a>
+      </div>
+      <div class="flex items-center gap-5">
+        <a href="https://www.linkedin.com/in/nariman-nasef" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h4v16H4zM6 2a2 2 0 110 4 2 2 0 010-4zM10 8h4v2.2c.6-1.1 2-2.4 4.2-2.4 4.5 0 4.8 3 4.8 6.2V20h-4v-5.2c0-1.4 0-3.1-2-3.1s-2.3 1.5-2.3 3V20h-4z"/></svg>
+        </a>
+        <a data-u="narimannasef11" data-d="gmail.com" href="#" aria-label="Email">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 bg-white border-b border-line shadow-[0_1px_0_rgba(0,0,0,0.02)]">
+    <div class="max-w-[82rem] mx-auto px-5 lg:px-8 pt-5 pb-3">
+      <div class="relative flex items-center justify-center pb-4">
+        <a href="/" class="text-center" aria-label="Nariman Nasef">
+          <div class="inline-flex items-baseline gap-2.5">
+            <span class="font-display text-[34px] sm:text-[38px] tracking-tightest text-ink">Nariman</span>
+            <span class="w-2.5 h-2.5 rounded-full bg-accent translate-y-[-3px]"></span>
+            <span class="font-display text-[34px] sm:text-[38px] tracking-tightest text-ink">Nasef</span>
+          </div>
+          <div class="mt-2.5 font-mono text-[12.5px] font-semibold tracking-[.24em] uppercase" style="color:#c8362e;">
+            Leadership <span style="color:#c8362e;opacity:.55;" class="mx-2.5">|</span> Planning <span style="color:#c8362e;opacity:.55;" class="mx-2.5">|</span> Collaboration <span style="color:#c8362e;opacity:.55;" class="mx-2.5">|</span> Delivery
+          </div>
+        </a>
+        <div class="absolute right-0 top-0 flex items-center gap-3">
+          <a href="/#contact" class="btn-primary hidden md:inline-flex">
+            Book intro
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+      <nav class="hidden lg:flex items-center justify-center gap-6 xl:gap-8 text-[13px] xl:text-[13.5px] font-medium text-ink whitespace-nowrap">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/#about">About</a>
+        <a class="nav-link" href="/#services">Services</a>
+        <a class="nav-link is-active" href="/testimonials.html">Testimonials</a>
+        <a class="nav-link" href="/#approach">Approach</a>
+        <a class="nav-link" href="/#articles">Articles</a>
+        <a class="nav-link" href="/#memberships">Memberships &amp; Awards</a>
+        <a class="nav-link" href="/community-work.html">Community Work</a>
+        <a class="nav-link" href="/natures-reel.html">Nature's Reel</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="hero-bg">
+    <div class="relative max-w-[82rem] mx-auto px-5 lg:px-8 py-20 lg:py-24">
+      <div class="max-w-[820px]">
+        <span class="eyebrow text-accent-soft mb-7" style="color:#f0a39e;">Recommendations</span>
+        <h1 class="mt-2 font-display text-white text-[36px] sm:text-[48px] lg:text-[60px] leading-[1.05]">
+          What people I've worked with say.
+        </h1>
+        <p class="mt-7 text-white/85 max-w-[640px] text-[16px] leading-[1.65]">
+          Recommendations from colleagues, mentees and partners. Each was left independently through Leland by someone I worked with before, vouching from firsthand experience.
+        </p>
+        <div class="mt-7 inline-flex items-center gap-3 px-5 py-3 rounded-full border border-white/20 bg-white/5">
+          <div class="flex gap-0.5 text-accent">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+          </div>
+          <span class="font-mono text-[12px] tracking-[.16em] uppercase text-white">5.0 average · 14 reviews</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS GRID -->
+  <section class="bg-paper-soft">
+    <div class="max-w-[82rem] mx-auto px-5 lg:px-8 pad-sec">
+      <div class="t-grid">
+
+        <article class="t-card bg-white rounded-md border border-line p-7">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="flex gap-0.5 text-accent">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+            </div>
+            <span class="font-mono text-[11px] tracking-[.16em] uppercase text-mute">5.0</span>
+          </div>
+          <blockquote class="text-[14.5px] leading-[1.7] text-ink-soft">
+            I worked with Nariman when I joined the PMO team at IBM. As my manager, she oversaw our most complex programs while directly mentoring my professional development. She is a skilled program manager and leader who excels at navigating stakeholder relationships and leading through influence. She taught me how to move past task management to focus on strategic outcomes and organizational alignment. Her leadership was a primary driver of our team's success and my own growth. I highly recommend her to anyone looking to level up their leadership or break into PM roles — they will gain immense value from her mentorship.
+          </blockquote>
+          <div class="mt-6 pt-5 border-t border-line flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-ink text-white flex items-center justify-center font-display text-[12.5px] tracking-tightest shrink-0">PC</div>
+            <div class="flex-1 min-w-0">
+              <div class="font-display text-[15px] text-ink leading-tight">Paula C.</div>
+              <div class="text-[12px] text-mute mt-1">April 2026</div>
+              <div class="text-[12px] text-mute mt-2 flex items-center gap-2">
+                Now at <img src="/assets/ibm.png" alt="IBM" class="h-3.5 w-auto" /> IBM
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="t-card bg-white rounded-md border border-line p-7">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="flex gap-0.5 text-accent">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+            </div>
+            <span class="font-mono text-[11px] tracking-[.16em] uppercase text-mute">5.0</span>
+          </div>
+          <blockquote class="text-[14.5px] leading-[1.7] text-ink-soft">
+            I recently had the pleasure of meeting Nariman and was very impressed by her professionalism, thoughtfulness, and genuine commitment to supporting others. My interactions with her left me with a strong impression of her intelligence, integrity, and depth of experience. Her background in PMO work, along with her experience at IBM, speaks to a strong foundation in structured execution, cross-functional collaboration, and working in complex professional environments. She comes across as someone who approaches her work with care, intention, and a sincere desire to help others succeed. I am pleased to support Nariman and believe she would be a valuable resource to those seeking thoughtful, experienced, and professional guidance.
+          </blockquote>
+          <div class="mt-6 pt-5 border-t border-line flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-display text-[12.5px] tracking-tightest shrink-0">SA</div>
+            <div>
+              <div class="font-display text-[15px] text-ink leading-tight">Sam A.</div>
+              <div class="text-[12px] text-mute mt-1">May 2026</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="t-card bg-white rounded-md border border-line p-7">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="flex gap-0.5 text-accent">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+            </div>
+            <span class="font-mono text-[11px] tracking-[.16em] uppercase text-mute">5.0</span>
+          </div>
+          <blockquote class="text-[14.5px] leading-[1.7] text-ink-soft">
+            Nariman is an exceptional coach and communicator. She has a rare ability to break down complex concepts into clear, structured insights that are easy to understand and apply. Her teaching style is both practical and engaging — she doesn't just explain frameworks, she ensures you can use them effectively in real-world scenarios. Her presentation skills are equally strong; she communicates with clarity, confidence, and purpose, making even the most complex topics accessible to diverse audiences. Anyone looking to strengthen their thinking, communication, and leadership in project management will gain tremendous value from working with her.
+          </blockquote>
+          <div class="mt-6 pt-5 border-t border-line flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-ink text-white flex items-center justify-center font-display text-[12.5px] tracking-tightest shrink-0">DF</div>
+            <div>
+              <div class="font-display text-[15px] text-ink leading-tight">Dalia F.</div>
+              <div class="text-[12px] text-mute mt-1">April 2026</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="t-card bg-white rounded-md border border-line p-7">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="flex gap-0.5 text-accent">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+            </div>
+            <span class="font-mono text-[11px] tracking-[.16em] uppercase text-mute">5.0</span>
+          </div>
+          <blockquote class="text-[14.5px] leading-[1.7] text-ink-soft">
+            I have worked with Nariman in both the Storage and Cloud organizations at IBM. She consistently demonstrates the ability to navigate ambiguity, align diverse stakeholders, and deliver results across large, interdependent initiatives. Her leadership style fosters collaboration, accountability, and trust — creating environments where teams can perform at their best. In addition to her project-management expertise, she is a natural coach and mentor.
+          </blockquote>
+          <div class="mt-6 pt-5 border-t border-line flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-display text-[12.5px] tracking-tightest shrink-0">CM</div>
+            <div>
+              <div class="font-display text-[15px] text-ink leading-tight">Claudette M.</div>
+              <div class="text-[12px] text-mute mt-1">April 2026</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="t-card bg-white rounded-md border border-line p-7">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="flex gap-0.5 text-accent">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+            </div>
+            <span class="font-mono text-[11px] tracking-[.16em] uppercase text-mute">5.0</span>
+          </div>
+          <blockquote class="text-[14.5px] leading-[1.7] text-ink-soft">
+            I can't say enough about the value Nariman brings as a highly experienced program manager. I have worked with her on multiple complex programs and she leads with purpose. She excels at problem solving, creating structure, collaboration, and communication. She is action driven with priority on producing results. Her calm demeanor in stressful environments is an added bonus. She is always continually developing her skills and mentoring others. I am fortunate to have teamed with her and value all she has taught me.
+          </blockquote>
+          <div class="mt-6 pt-5 border-t border-line flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-ink text-white flex items-center justify-center font-display text-[12.5px] tracking-tightest shrink-0">LH</div>
+            <div>
+              <div class="font-display text-[15px] text-ink leading-tight">Lori H.</div>
+              <div class="text-[12px] text-mute mt-1">April 2026</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="t-card bg-white rounded-md border border-line p-7">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="flex gap-0.5 text-accent">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+            </div>
+            <span class="font-mono text-[11px] tracking-[.16em] uppercase text-mute">5.0</span>
+          </div>
+          <blockquote class="text-[14.5px] leading-[1.7] text-ink-soft">
+            Nariman is an experienced Project Management professional who has led large and complex programs at IBM. She is focused on client delivery and leads projects with integrity. I highly recommend her as a coach. Her extensive experience and personal commitment to your development as a team member will help you become a better project manager.
+          </blockquote>
+          <div class="mt-6 pt-5 border-t border-line flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-mute/30 text-mute flex items-center justify-center shrink-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            </div>
+            <div>
+              <div class="font-display text-[15px] text-ink leading-tight">Anonymous</div>
+              <div class="text-[12px] text-mute mt-1">April 2026</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="t-card bg-white rounded-md border border-line p-7">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="flex gap-0.5 text-accent">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+            </div>
+            <span class="font-mono text-[11px] tracking-[.16em] uppercase text-mute">5.0</span>
+          </div>
+          <blockquote class="text-[14.5px] leading-[1.7] text-ink-soft">
+            Nariman is one of the most accomplished professionals I've had the honour to work with. She knows how to get things done and how to take the team with her on that journey. She has much to impart and I would recommend her for any 1-on-1 or small team coaching exercises.
+          </blockquote>
+          <div class="mt-6 pt-5 border-t border-line flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-display text-[12.5px] tracking-tightest shrink-0">DK</div>
+            <div>
+              <div class="font-display text-[15px] text-ink leading-tight">Dan K.</div>
+              <div class="text-[12px] text-mute mt-1">April 2026</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="t-card bg-white rounded-md border border-line p-7">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="flex gap-0.5 text-accent">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+            </div>
+            <span class="font-mono text-[11px] tracking-[.16em] uppercase text-mute">5.0</span>
+          </div>
+          <blockquote class="text-[14.5px] leading-[1.7] text-ink-soft">
+            Nariman is a perfectionist who has the ability to clearly coach her team and successfully manage a project to completion. One of her biggest strengths is her ability to collaborate across departments and gather accurate datapoints.
+          </blockquote>
+          <div class="mt-6 pt-5 border-t border-line flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-mute/30 text-mute flex items-center justify-center shrink-0">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            </div>
+            <div>
+              <div class="font-display text-[15px] text-ink leading-tight">Anonymous</div>
+              <div class="text-[12px] text-mute mt-1">April 2026</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="t-card bg-white rounded-md border border-line p-7">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="flex gap-0.5 text-accent">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+            </div>
+            <span class="font-mono text-[11px] tracking-[.16em] uppercase text-mute">5.0</span>
+          </div>
+          <blockquote class="text-[14.5px] leading-[1.7] text-ink-soft">
+            I worked with Nariman earlier in our careers and remember her as someone I really enjoyed collaborating with — thoughtful, dependable, and committed to doing things well. Even though it's been some time since we worked closely together, I've followed her career with admiration and respect. I'm very happy to support her based on my firsthand experience working with her.
+          </blockquote>
+          <div class="mt-6 pt-5 border-t border-line flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-ink text-white flex items-center justify-center font-display text-[12.5px] tracking-tightest shrink-0">AM</div>
+            <div>
+              <div class="font-display text-[15px] text-ink leading-tight">Anie M.</div>
+              <div class="text-[12px] text-mute mt-1">April 2026</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="t-card bg-white rounded-md border border-line p-7">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="flex gap-0.5 text-accent">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+            </div>
+            <span class="font-mono text-[11px] tracking-[.16em] uppercase text-mute">5.0</span>
+          </div>
+          <blockquote class="text-[14.5px] leading-[1.7] text-ink-soft">
+            Nariman is a powerhouse in program management and a natural coach. Having worked in large-scale, complex project environments myself, I can confidently say her ability to translate ambiguity into structured, actionable plans is exceptional. She combines executive-level experience with practical delivery insight, making her guidance highly impactful for professionals looking to lead and scale programs effectively.
+          </blockquote>
+          <div class="mt-6 pt-5 border-t border-line flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-display text-[12.5px] tracking-tightest shrink-0">NE</div>
+            <div>
+              <div class="font-display text-[15px] text-ink leading-tight">Nany E.</div>
+              <div class="text-[12px] text-mute mt-1">April 2026</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="t-card bg-white rounded-md border border-line p-7">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="flex gap-0.5 text-accent">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+            </div>
+            <span class="font-mono text-[11px] tracking-[.16em] uppercase text-mute">5.0</span>
+          </div>
+          <blockquote class="text-[14.5px] leading-[1.7] text-ink-soft">
+            Nariman is an experienced program manager leader with strong experience managing strategic programs and transformation initiatives. She is also an IBM certified coach using the GROW method for 10 years. As an experienced program/project manager she combines strong expertise with real passion for what she does, and has a great ability to simplify complex ideas into practical, actionable steps. Her experience spans project management practices in complex programs and transformation initiatives, along with agile transformation, where she brings the perspective of a certified leader with strong executive presence. She's supportive, clear, and genuinely invested in helping others grow.
+          </blockquote>
+          <div class="mt-6 pt-5 border-t border-line flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-ink text-white flex items-center justify-center font-display text-[12.5px] tracking-tightest shrink-0">HE</div>
+            <div>
+              <div class="font-display text-[15px] text-ink leading-tight">Hadeel E.</div>
+              <div class="text-[12px] text-mute mt-1">April 2026</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="t-card bg-white rounded-md border border-line p-7">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="flex gap-0.5 text-accent">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+            </div>
+            <span class="font-mono text-[11px] tracking-[.16em] uppercase text-mute">5.0</span>
+          </div>
+          <blockquote class="text-[14.5px] leading-[1.7] text-ink-soft">
+            Nariman is a leader in project and program management. She has a long track record (20+) in managing complex software projects at IBM across many organizations and teams. She is particularly skilled in agile approaches and has led the transformation of many organizations towards it. Nariman is also certified in her profession from the PMI. She has also given numerous talks in various events on trending topics in her field of expertise. I was particularly impressed when I invited her as a guest speaker in my UCLA software engineering class where she masterfully lectured on the project management topic.
+          </blockquote>
+          <div class="mt-6 pt-5 border-t border-line flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-display text-[12.5px] tracking-tightest shrink-0">ME</div>
+            <div>
+              <div class="font-display text-[15px] text-ink leading-tight">Maged E.</div>
+              <div class="text-[12px] text-mute mt-1">April 2026</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="t-card bg-white rounded-md border border-line p-7">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="flex gap-0.5 text-accent">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+            </div>
+            <span class="font-mono text-[11px] tracking-[.16em] uppercase text-mute">5.0</span>
+          </div>
+          <blockquote class="text-[14.5px] leading-[1.7] text-ink-soft">
+            Nariman is the kind of coach who bridges theory and real-world execution seamlessly. As a Program Director at IBM with over two decades of experience, she has led large-scale, high-impact initiatives and understands what it actually takes to deliver results in complex environments. She doesn't just teach project management frameworks — she helps you think like a leader: how to navigate ambiguity, align stakeholders, and drive outcomes that matter. Her perspective on emerging areas like AI and enterprise transformation adds an extra layer of relevance for today's professionals. Anyone looking to elevate their project or program management skills would benefit significantly from working with her.
+          </blockquote>
+          <div class="mt-6 pt-5 border-t border-line flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-ink text-white flex items-center justify-center font-display text-[12.5px] tracking-tightest shrink-0">MS</div>
+            <div>
+              <div class="font-display text-[15px] text-ink leading-tight">Mariam S.</div>
+              <div class="text-[12px] text-mute mt-1">April 2026</div>
+            </div>
+          </div>
+        </article>
+
+        <article class="t-card bg-white rounded-md border border-line p-7">
+          <div class="flex items-center gap-2 mb-4">
+            <div class="flex gap-0.5 text-accent">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z"/></svg>
+            </div>
+            <span class="font-mono text-[11px] tracking-[.16em] uppercase text-mute">5.0</span>
+          </div>
+          <blockquote class="text-[14.5px] leading-[1.7] text-ink-soft">
+            I highly recommend Nariman as a strong candidate for your project management and Agile-focused coaching needs. She consistently demonstrates exceptional organizational skills, clear communication, and a natural ability to keep teams aligned and motivated. She brings valuable hands-on experience managing projects in both the cloud and software spaces at IBM, where she has successfully navigated complex technical environments and cross-functional teams. This background gives her a strong foundation in delivering scalable, high-impact solutions while balancing technical requirements with business objectives.<br/><br/>
+            One of her standout strengths is her ability to break down complex projects into manageable, actionable steps. She has a keen sense of prioritization and ensures that deadlines are met without compromising quality. Her attention to detail, combined with a big-picture mindset, allows her to anticipate risks early and proactively address challenges before they escalate.<br/><br/>
+            In collaborative environments, she excels at facilitating discussions, encouraging diverse perspectives, and driving consensus. She creates a positive team atmosphere where everyone feels heard and accountable, which is critical for Agile success. Her adaptability and openness to feedback make her particularly effective in iterative processes, where continuous improvement is key. Her leadership, problem-solving ability, and commitment to delivering value — combined with her experience in cloud and software project management — make her an excellent fit for your coaching needs.
+          </blockquote>
+          <div class="mt-6 pt-5 border-t border-line flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-display text-[12.5px] tracking-tightest shrink-0">SW</div>
+            <div>
+              <div class="font-display text-[15px] text-ink leading-tight">Stephanie W.</div>
+              <div class="text-[12px] text-mute mt-1">April 2026</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="mt-14 text-center">
+        <a href="/#contact" class="btn-primary">
+          Book an intro call
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink-deep text-white/55">
+    <div class="max-w-[82rem] mx-auto px-5 lg:px-8 py-10 flex flex-col md:flex-row gap-4 md:items-center md:justify-between text-[12.5px]">
+      <div class="flex items-center gap-2.5">
+        <span>© 2026 Nariman Nasef. All rights reserved.</span>
+      </div>
+      <div class="flex flex-wrap gap-x-5 gap-y-2">
+        <a href="/#about" class="hover:text-white">About</a>
+        <a href="/#services" class="hover:text-white">Services</a>
+        <a href="/testimonials.html" class="hover:text-white">Testimonials</a>
+        <a href="/#approach" class="hover:text-white">Approach</a>
+        <a href="/#articles" class="hover:text-white">Articles</a>
+        <a href="/#memberships" class="hover:text-white">Memberships &amp; Awards</a>
+        <a href="/community-work.html" class="hover:text-white">Community Work</a>
+        <a href="/natures-reel.html" class="hover:text-white">Nature's Reel</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var at = String.fromCharCode(64);
+      var prefix = 'mai' + 'lto:';
+      document.querySelectorAll('[data-u][data-d]').forEach(function (el) {
+        var addr = el.getAttribute('data-u') + at + el.getAttribute('data-d');
+        var s = el.getAttribute('data-s');
+        el.setAttribute('href', prefix + addr + (s ? '?subject=' + s : ''));
+        if (el.classList.contains('email-show')) el.textContent = addr;
+      });
+    })();
+  </script>
+</body>
+</html>
