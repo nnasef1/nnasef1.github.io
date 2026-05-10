@@ -194,10 +194,12 @@
     /* Top utility bar */
     .top-bar {
       background: #0e0e16;
-      color: #a8a8b5;
+      color: #d4d4dc;
       font-size: 12.5px;
     }
-    .top-bar a:hover { color: #fff; }
+    .top-bar a { color: #ffffff; transition: color .2s; }
+    .top-bar a:hover { color: #e6584f; }
+    .top-bar .divider { color: rgba(255,255,255,.22); }
   </style>
 </head>
 <body>
@@ -368,33 +370,45 @@
   <!-- ============== ABOUT / VISION ============== -->
   <section id="about" class="bg-white">
     <div class="max-w-[82rem] mx-auto px-5 lg:px-8 pad-sec">
-      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-        <div class="lg:col-span-5">
-          <div class="relative aspect-[4/5] rounded-md overflow-hidden">
-            <img src="https://placehold.co/700x900/15151f/ffffff?text=+" class="w-full h-full object-cover" alt="" />
-            <div class="absolute -bottom-6 -right-6 hidden md:block bg-accent text-white px-7 py-6 rounded-md shadow-xl">
-              <div class="font-display text-[32px] leading-none">20+</div>
-              <div class="text-[12px] uppercase tracking-[.18em] mt-1">Years on the work</div>
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div class="lg:col-span-4">
+          <!-- Portrait — drop your LinkedIn photo at assets/nariman.jpg and it will replace the monogram fallback automatically -->
+          <div class="relative max-w-[340px] aspect-square rounded-md overflow-hidden bg-ink flex items-center justify-center">
+            <span class="font-display text-white text-[72px] tracking-tightest opacity-25 select-none">NN</span>
+            <img src="assets/nariman.jpg" alt="Nariman Nasef" class="absolute inset-0 w-full h-full object-cover" loading="lazy" onerror="this.style.display='none'" />
+            <div class="absolute -bottom-5 -right-5 hidden md:block bg-accent text-white px-6 py-5 rounded-md shadow-xl">
+              <div class="font-display text-[26px] leading-none">20+</div>
+              <div class="text-[11px] uppercase tracking-[.18em] mt-1">Years on the work</div>
             </div>
           </div>
         </div>
-        <div class="lg:col-span-7">
+        <div class="lg:col-span-8">
           <span class="eyebrow mb-5">About Nariman</span>
-          <h2 class="mt-4 font-display text-ink text-[36px] sm:text-[48px] lg:text-[56px] leading-[1.05]">
-            Twenty years of leading software that <span class="accent-mark">can't slip</span>.
+          <h2 class="mt-4 font-display text-ink text-[36px] sm:text-[44px] lg:text-[52px] leading-[1.05]">
+            Twenty years in. Still building. Still <span class="accent-mark">leading</span>. Still learning.
           </h2>
-          <p class="mt-6 text-[16.5px] leading-[1.75] text-ink-soft">
-            I'm a software and cloud delivery leader based in California. For more than two decades I've led mission-critical programs across enterprise software, cloud platforms, and the teams that run them.
+          <p class="mt-7 text-[16.5px] leading-[1.75] text-ink-soft">
+            I come from a family of medical professionals — but technology pulled me in early. The pace of it. The way the ground keeps moving. The constant invitation to learn something new. That's the field I chose, and twenty-plus years on, it's still the work I want to be doing.
           </p>
           <p class="mt-4 text-[16.5px] leading-[1.75] text-ink-soft">
-            I work independently now — partnering with VPs, founders, and program sponsors who need someone who has actually carried the bag, not just diagrammed it. The work splits between hands-on program leadership and 1:1 coaching for the leaders behind the work.
+            I started hands-on — front-end, web, and database development — and discovered along the way that the harder problem wasn't the code. It was the people. Getting the right ones in the room, aligning their motivations, and turning complex ideas into something real. That pull moved me into program management, where I lead cross-functional teams and align stakeholders — most often through influence rather than formal authority.
+          </p>
+          <p class="mt-4 text-[16.5px] leading-[1.75] text-ink-soft">
+            My journey has run across Egypt, Canada, and the United States, and that's shaped how I work. I've partnered with teams in every time zone, across cultures and across the full stack — from on-premise software and hardware to cloud infrastructure. The breadth makes the work better. It also makes me a steadier partner when the program turns sideways.
+          </p>
+          <p class="mt-4 text-[16.5px] leading-[1.75] text-ink-soft">
+            I'm an avid learner. Every project deepens both the craft and the conviction. A Master's in Engineering Management. PMP and PMI-ACP credentials, applied to large-scale initiatives and Agile transformations. In this field, if you stop evolving you fall behind. I haven't, and I won't.
+          </p>
+          <p class="mt-4 text-[16.5px] leading-[1.75] text-ink-soft">
+            None of this works without the family who walks beside it — pursuing their own passions while supporting mine. Ultimately, doing meaningful work for people who care about it is what makes a career worth building.
           </p>
 
-          <ul class="check mt-9 max-w-[520px]">
-            <li>Hands-on with multi-region cloud, platform, and modernisation programs</li>
-            <li>Direct experience with M&amp;A integration and post-deal operating models</li>
-            <li>ICF-aligned coaching for engineering directors, VPs, and founders</li>
-            <li>Works at the layer between strategy decks and the people delivering them</li>
+          <ul class="check mt-9 max-w-[640px]">
+            <li>Hands-on technical leadership across continents and time zones</li>
+            <li>Mission-critical delivery across on-premise products, SaaS, cloud services, and post-acquisition integration</li>
+            <li>IBM-trained coach for career growth, leadership transitions, and planning</li>
+            <li>Transformation leader for Agile programs and operating-model change at scale</li>
+            <li>Genuine passion for leadership and people development</li>
           </ul>
 
           <div class="mt-9 flex flex-wrap gap-3">
@@ -513,7 +527,7 @@
         </div>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-6">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
 
         <article class="group">
           <a href="https://www.agile-thoughts.com/article/6-agile-leadership/" target="_blank" rel="noopener" class="block aspect-[4/3] rounded-md overflow-hidden mb-5 relative bg-ink">
@@ -574,6 +588,27 @@
           </p>
           <a href="https://www.linkedin.com/pulse/get-done-perfection-nariman-nasef/" target="_blank" rel="noopener" class="mt-4 arrow-link">
             Read on LinkedIn
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg>
+          </a>
+        </article>
+
+        <article class="group">
+          <a href="https://medium.com/@narimannasef11/are-we-really-moving-forward-0c06784dd9af" target="_blank" rel="noopener" class="block aspect-[4/3] rounded-md overflow-hidden mb-5 relative bg-ink">
+            <img src="https://miro.medium.com/v2/resize:fit:1200/1*dmbNkD5D-u45r44go_cf0g.png" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" alt="Are We Really Moving Forward — article cover" loading="lazy" />
+            <div class="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/30"></div>
+            <div class="absolute inset-0 flex items-end p-6 z-10">
+              <span class="font-display text-white text-[22px] sm:text-[26px] tracking-tightest leading-[1.05]">Are We Really<br/>Moving Forward?</span>
+            </div>
+            <span class="absolute top-4 left-4 bg-accent text-white text-[10.5px] uppercase tracking-[.16em] px-3 py-1.5 rounded-full font-semibold z-10">Medium</span>
+          </a>
+          <h3 class="font-display text-[22px] tracking-tightest text-ink leading-tight">
+            Are we really moving forward?
+          </h3>
+          <p class="mt-2 text-[14.5px] text-mute leading-[1.6]">
+            On the gap between motion and progress — and why staying busy is the easiest way to stop moving.
+          </p>
+          <a href="https://medium.com/@narimannasef11/are-we-really-moving-forward-0c06784dd9af" target="_blank" rel="noopener" class="mt-4 arrow-link">
+            Read on Medium
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M7 17 17 7M9 7h8v8"/></svg>
           </a>
         </article>
